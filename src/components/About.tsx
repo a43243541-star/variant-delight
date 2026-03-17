@@ -25,9 +25,9 @@ const About = () => {
           {/* Left text */}
           <div>
             <p className="font-handwritten text-primary text-2xl mb-2">Кто мы такие?</p>
-            <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold tracking-tight mb-6">Энергия академии
-Опыт выпускников<br />
-              <span className="text-primary">Опыт выпускников.</span>
+            <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold tracking-tight mb-6">
+              Энергия академии<br />
+              <span className="text-primary">Опыт выпускников</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">Мы — мост между студенчеством и реальной юридической практикой. Наша цель — помочь молодым специалистам найти свой путь, опираясь на поддержку тех, кто уже прошел эту школу и стал лидером отрасли
 
