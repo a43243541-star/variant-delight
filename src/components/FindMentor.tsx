@@ -136,7 +136,7 @@ const FindMentor = () => {
                   className="w-28 h-28 rounded-full border-4 border-card object-cover shadow-lg translate-y-8 group-hover:scale-105 transition-transform duration-300"
                 />
                 {mentor.available && (
-                  <span className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 rounded-pill bg-emerald-500/10 text-emerald-600 text-xs font-bold font-display">
+                  <span className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 rounded-pill bg-primary/10 text-primary text-xs font-bold font-display">
                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     Свободен
                   </span>
