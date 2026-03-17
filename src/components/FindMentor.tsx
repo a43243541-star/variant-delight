@@ -20,7 +20,7 @@ const mentors = [
   img: "/lovable-uploads/864924f1-4c52-4993-bbfb-b4fbdee64b7e.png",
   specialty: "Уголовный процесс",
   category: "criminal",
-  role: "Адвокат по уголовным делам, партнёр",
+  role: "Руководитель команды арбитражных управляющих, \nкандидат юридических наук, основатель \nГруппы Компаний «Федеральная Экспертная Служба»",
   experience: "15 лет",
   quote: "Готов взять 2 студентов для разбора реальных судебных кейсов.",
   available: true
@@ -166,7 +166,7 @@ const FindMentor = () => {
                 <span className="inline-block text-xs bg-primary/10 text-primary px-3 py-1 rounded-pill font-bold font-display uppercase mb-2">
                   {mentor.specialty}
                 </span>
-                <p className="text-sm mb-1 text-muted-foreground">{mentor.role}</p>
+                <p className="text-sm mb-1 text-muted-foreground whitespace-pre-line">{mentor.role}</p>
                 <p className="text-xs text-muted-foreground/70 mb-4">Опыт: {mentor.experience}</p>
                 <p className="text-sm text-foreground/70 italic leading-relaxed mb-5">
                   &ldquo;{mentor.quote}&rdquo;
