@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Search, Filter, GraduationCap, Briefcase, Scale, BookOpen } from "lucide-react";
+import { Search, Filter, GraduationCap, Briefcase, Scale, BookOpen, Send } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { toast } from "sonner";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const mentors = [
@@ -57,6 +59,21 @@ const FindMentor = () => {
   const { ref, isVisible } = useScrollReveal();
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedMentor, setSelectedMentor] = useState<typeof mentors[0] | null>(null);
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) return;
+    setSending(true);
+    setTimeout(() => {
+      toast.success(`Заявка отправлена наставнику ${selectedMentor?.name}!`);
+      setFormData({ name: "", email: "", message: "" });
+      setSelectedMentor(null);
+      setSending(false);
+    }, 600);
+  };
 
   const filtered = mentors.filter((m) => {
     const matchCategory = activeCategory === "all" || m.category === activeCategory;
@@ -154,7 +171,10 @@ const FindMentor = () => {
                 <p className="text-sm text-foreground/70 italic leading-relaxed mb-5">
                   &ldquo;{mentor.quote}&rdquo;
                 </p>
-                <button className="w-full py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer">
+                <button
+                  onClick={() => setSelectedMentor(mentor)}
+                  className="w-full py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer"
+                >
                   Связаться
                 </button>
               </div>
@@ -169,6 +189,64 @@ const FindMentor = () => {
           </div>
         )}
       </div>
+
+      {/* Contact Dialog */}
+      <Dialog open={!!selectedMentor} onOpenChange={(open) => !open && setSelectedMentor(null)}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="font-display">Связаться с {selectedMentor?.name}</DialogTitle>
+            <DialogDescription>
+              {selectedMentor?.specialty} · {selectedMentor?.experience} опыта
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="space-y-4 mt-2">
+            <div>
+              <label className="block text-sm font-display font-semibold text-foreground mb-1.5">Ваше имя</label>
+              <input
+                type="text"
+                required
+                maxLength={100}
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                placeholder="Иван Иванов"
+                className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-sm"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-display font-semibold text-foreground mb-1.5">Email</label>
+              <input
+                type="email"
+                required
+                maxLength={255}
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                placeholder="ivan@example.com"
+                className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-sm"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-display font-semibold text-foreground mb-1.5">Сообщение</label>
+              <textarea
+                required
+                maxLength={1000}
+                rows={3}
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                placeholder="Расскажите, чем наставник может вам помочь..."
+                className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-sm resize-none"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={sending}
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer disabled:opacity-50"
+            >
+              <Send className="w-4 h-4" />
+              {sending ? "Отправка..." : "Отправить заявку"}
+            </button>
+          </form>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
