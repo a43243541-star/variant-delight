@@ -166,7 +166,7 @@ const FindMentor = () => {
                 <span className="inline-block text-xs bg-primary/10 text-primary px-3 py-1 rounded-pill font-bold font-display uppercase mb-2">
                   {mentor.specialty}
                 </span>
-                <p className="text-sm mb-1 text-muted-foreground">{mentor.role}</p>
+                <p className="text-sm mb-1 text-muted-foreground whitespace-pre-line">{mentor.role}</p>
                 <p className="text-xs text-muted-foreground/70 mb-4">Опыт: {mentor.experience}</p>
                 <p className="text-sm text-foreground/70 italic leading-relaxed mb-5">
                   &ldquo;{mentor.quote}&rdquo;
