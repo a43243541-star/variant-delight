@@ -7,14 +7,15 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "5%",
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
       fontFamily: {
-        sans: ["Manrope", "system-ui", "sans-serif"],
+        display: ["Outfit", "sans-serif"],
+        body: ["Inter", "sans-serif"],
         handwritten: ["Caveat", "cursive"],
       },
       colors: {
@@ -70,6 +71,13 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "2xl": "24px",
+        "3xl": "40px",
+        pill: "100px",
+      },
+      boxShadow: {
+        float: "0 20px 40px -10px rgba(0, 71, 255, 0.15)",
+        card: "0 10px 30px -5px rgba(10, 25, 48, 0.08)",
       },
       keyframes: {
         "accordion-down": {
@@ -93,10 +101,10 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.8s ease-out forwards",
-        "fade-up-delay-1": "fade-up 0.8s ease-out 0.2s forwards",
-        "fade-up-delay-2": "fade-up 0.8s ease-out 0.4s forwards",
-        "fade-up-delay-3": "fade-up 0.8s ease-out 0.6s forwards",
-        "fade-in": "fade-in 0.6s ease-out forwards",
+        "fade-up-d1": "fade-up 0.8s ease-out 0.15s forwards",
+        "fade-up-d2": "fade-up 0.8s ease-out 0.3s forwards",
+        "fade-up-d3": "fade-up 0.8s ease-out 0.45s forwards",
+        "fade-in": "fade-in 0.5s ease-out forwards",
       },
     },
   },
