@@ -137,7 +137,7 @@ const FindMentor = () => {
                 />
                 {mentor.available && (
                   <span className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 rounded-pill bg-emerald-500/10 text-emerald-600 text-xs font-bold font-display">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     Свободен
                   </span>
                 )}
