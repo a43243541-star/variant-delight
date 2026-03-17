@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -8,50 +6,51 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-deep/70 to-deep/90" />
-      </div>
+    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-deep">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-40 z-0"
+        style={{ backgroundImage: `url(${heroBg})`, mixBlendMode: "luminosity" }}
+      />
+      {/* Overlay gradient */}
+      <div
+        className="absolute inset-0 z-[1]"
+        style={{ background: "linear-gradient(135deg, rgba(10,25,48,0.9) 0%, rgba(0,71,255,0.4) 100%)" }}
+      />
+
+      {/* Swoosh SVG */}
+      <svg className="absolute right-[-10%] top-[20%] w-[50%] opacity-20 pointer-events-none z-0" viewBox="0 0 600 400" fill="none">
+        <path d="M0 200 C150 50, 450 350, 600 200" stroke="white" strokeWidth="2" fill="none" opacity="0.3" />
+        <path d="M0 250 C150 100, 450 400, 600 250" stroke="white" strokeWidth="1" fill="none" opacity="0.2" />
+        <path d="M0 150 C150 0, 450 300, 600 150" stroke="white" strokeWidth="1.5" fill="none" opacity="0.15" />
+      </svg>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-32 text-center lg:text-left lg:max-w-5xl">
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-primary-foreground leading-tight opacity-0 animate-fade-up">
-          Твой старт в большую{" "}
-          <span className="font-handwritten text-5xl sm:text-6xl lg:text-8xl text-primary-foreground/90 inline-block -rotate-2">
-            юридическую
-          </span>{" "}
-          карьеру.
-        </h1>
-
-        <p className="mt-6 max-w-2xl text-lg text-primary-foreground/75 opacity-0 animate-fade-up-delay-1 mx-auto lg:mx-0">
-          Молодежный штаб Ассоциации выпускников СЮИ-СГАП-СГЮА. Объединяем поколения,
-          делимся опытом, создаём будущее юриспруденции вместе.
+      <div className="relative z-[2] container mx-auto text-primary-foreground max-w-[900px]">
+        <p className="font-handwritten text-primary-foreground text-2xl md:text-3xl opacity-0 animate-fade-up">
+          Твой старт в карьеру
         </p>
-
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0 animate-fade-up-delay-2">
-          <Button
-            size="lg"
-            className="rounded-full bg-primary-foreground text-deep font-bold hover:bg-primary-foreground/90 text-base px-8"
+        <h1 className="text-primary-foreground text-[clamp(3rem,6vw,6rem)] font-display font-black tracking-tight leading-[1.05] my-4 opacity-0 animate-fade-up-d1">
+          Будущее права<br />начинается здесь.
+        </h1>
+        <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-[600px] opacity-0 animate-fade-up-d2">
+          Молодежный штаб Ассоциации выпускников СЮИ-СГАП-СГЮА. Объединяем поколения, делимся опытом, создаем элиту юриспруденции вместе.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up-d3">
+          <button
             onClick={() => scrollTo("#footer")}
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all cursor-pointer border-none relative overflow-hidden z-[1]"
           >
             Присоединиться к команде
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="rounded-full border-primary-foreground/30 text-primary-foreground font-semibold hover:bg-primary-foreground/10 text-base px-8"
-            onClick={() => scrollTo("#training")}
+          </button>
+          <button
+            onClick={() => scrollTo("#gallery")}
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-card text-deep shadow-card hover:-translate-y-1 hover:text-primary hover:shadow-float transition-all cursor-pointer border-none"
           >
-            Узнать о событиях
-          </Button>
+            Ближайшие события
+          </button>
         </div>
       </div>
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

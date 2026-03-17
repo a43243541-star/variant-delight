@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "О штабе", href: "#about" },
-  { label: "Об Ассоциации", href: "#association" },
+  { label: "Об Ассоциации", href: "#history" },
   { label: "Обучения", href: "#training" },
-  { label: "Фотографии", href: "#gallery" },
+  { label: "События", href: "#gallery" },
 ];
 
 const Header = () => {
@@ -25,25 +24,35 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
-      <nav
-        className={`flex w-full max-w-6xl items-center justify-between rounded-full px-6 py-3 transition-all duration-300 ${
-          scrolled
-            ? "bg-deep/80 shadow-xl backdrop-blur-lg"
-            : "bg-deep/40 backdrop-blur-md"
-        }`}
-      >
-        <a href="#" className="text-lg font-bold text-primary-foreground tracking-tight">
-          МШ <span className="text-primary">СГЮА</span>
+    <header
+      className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-[1400px] z-[100] rounded-pill border border-white/40"
+      style={{
+        background: "rgba(255,255,255,0.85)",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        boxShadow: "0 4px 30px rgba(0,0,0,0.05)",
+      }}
+    >
+      <div className="flex items-center justify-between px-6 py-3">
+        {/* Logo */}
+        <a
+          href="#"
+          className="flex items-center gap-3 font-display font-extrabold text-lg text-deep no-underline"
+          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+        >
+          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display font-extrabold text-sm">
+            Ш
+          </div>
+          Штаб СГЮА
         </a>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-6">
+        <ul className="hidden md:flex items-center gap-8 list-none">
           {navLinks.map((l) => (
             <li key={l.href}>
               <button
                 onClick={() => handleNav(l.href)}
-                className="text-sm font-medium text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                className="text-[0.95rem] font-medium text-foreground hover:text-primary transition-colors bg-transparent border-none cursor-pointer"
               >
                 {l.label}
               </button>
@@ -51,47 +60,44 @@ const Header = () => {
           ))}
         </ul>
 
-        <div className="hidden md:block">
-          <Button
-            size="sm"
-            className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
-            onClick={() => handleNav("#footer")}
-          >
-            Вступить в штаб
-          </Button>
-        </div>
+        <button
+          onClick={() => handleNav("#footer")}
+          className="hidden md:inline-flex items-center justify-center gap-2 px-6 py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all cursor-pointer border-none"
+        >
+          Вступить в штаб
+        </button>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-primary-foreground"
+          className="md:hidden text-foreground bg-transparent border-none cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Меню"
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
-      </nav>
+      </div>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="absolute top-full left-4 right-4 mt-2 rounded-2xl bg-deep/95 backdrop-blur-lg p-6 md:hidden shadow-2xl animate-fade-in">
-          <ul className="flex flex-col gap-4">
+        <div className="md:hidden px-6 pb-6 pt-2 animate-fade-in">
+          <ul className="flex flex-col gap-4 list-none">
             {navLinks.map((l) => (
               <li key={l.href}>
                 <button
                   onClick={() => handleNav(l.href)}
-                  className="text-base font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors w-full text-left"
+                  className="text-base font-medium text-foreground hover:text-primary transition-colors bg-transparent border-none cursor-pointer w-full text-left"
                 >
                   {l.label}
                 </button>
               </li>
             ))}
             <li>
-              <Button
-                className="w-full rounded-full bg-primary text-primary-foreground font-semibold"
+              <button
                 onClick={() => handleNav("#footer")}
+                className="w-full px-6 py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground border-none cursor-pointer"
               >
                 Вступить в штаб
-              </Button>
+              </button>
             </li>
           </ul>
         </div>
