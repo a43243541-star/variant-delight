@@ -1,4 +1,5 @@
 import associationImg from "@/assets/association.jpg";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const stats = [
   { value: "500+", label: "Активных резидентов штаба", color: "text-primary" },
