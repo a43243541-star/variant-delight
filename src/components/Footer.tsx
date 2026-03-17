@@ -3,6 +3,7 @@ import { toast } from "sonner";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Footer = () => {
+  const { ref, isVisible } = useScrollReveal();
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
