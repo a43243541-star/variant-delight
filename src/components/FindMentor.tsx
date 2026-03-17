@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Search, Filter, GraduationCap, Briefcase, Scale, BookOpen } from "lucide-react";
+import { Search, Filter, GraduationCap, Briefcase, Scale, BookOpen, Send } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { toast } from "sonner";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const mentors = [
