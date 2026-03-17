@@ -4,6 +4,7 @@ import historyNew from "@/assets/history-new.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const History = () => {
+  const { ref: revealRef, isVisible } = useScrollReveal();
   const sliderRef = useRef<HTMLDivElement>(null);
   const [sliderPos, setSliderPos] = useState(50);
   const dragging = useRef(false);
