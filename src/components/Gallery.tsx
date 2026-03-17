@@ -21,6 +21,7 @@ const photos: { src: string; title: string; subtitle: string; cat: Exclude<Categ
 const filters: Category[] = ["Все", "Обучения", "Форумы", "Неформальное"];
 
 const Gallery = () => {
+  const { ref, isVisible } = useScrollReveal();
   const [active, setActive] = useState<Category>("Все");
   const filtered = active === "Все" ? photos : photos.filter((p) => p.cat === active);
 
