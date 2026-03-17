@@ -2,6 +2,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Hero = () => {
+  const { ref, isVisible } = useScrollReveal(0.1);
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
