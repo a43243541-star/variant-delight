@@ -171,7 +171,10 @@ const FindMentor = () => {
                 <p className="text-sm text-foreground/70 italic leading-relaxed mb-5">
                   &ldquo;{mentor.quote}&rdquo;
                 </p>
-                <button className="w-full py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer">
+                <button
+                  onClick={() => setSelectedMentor(mentor)}
+                  className="w-full py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer"
+                >
                   Связаться
                 </button>
               </div>
