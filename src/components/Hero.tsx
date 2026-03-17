@@ -28,7 +28,7 @@ const Hero = () => {
       </svg>
 
       {/* Content */}
-      <div className="relative z-[2] container mx-auto text-primary-foreground max-w-[900px]">
+      <div ref={ref} className={`relative z-[2] container mx-auto text-primary-foreground max-w-[900px] scroll-reveal ${isVisible ? "visible" : ""}`}>
         <p className="font-handwritten text-primary-foreground text-2xl md:text-3xl opacity-0 animate-fade-up">
           Твой старт в карьеру
         </p>

@@ -22,7 +22,7 @@ const History = () => {
   const handleTouchMove = (e: React.TouchEvent) => handleMove(e.touches[0].clientX);
 
   return (
-    <section id="history" className="py-24 lg:py-32 bg-deep text-deep-foreground relative overflow-hidden">
+    <section ref={revealRef} id="history" className={`py-24 lg:py-32 bg-deep text-deep-foreground relative overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}>
       <div className="container mx-auto text-center">
         <p className="font-handwritten text-primary text-2xl mb-2">Наследие</p>
         <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold text-primary-foreground tracking-tight mb-4">

@@ -26,7 +26,7 @@ const Gallery = () => {
   const filtered = active === "Все" ? photos : photos.filter((p) => p.cat === active);
 
   return (
-    <section id="gallery" className="py-24 lg:py-32">
+    <section ref={ref} id="gallery" className={`py-24 lg:py-32 scroll-reveal ${isVisible ? "visible" : ""}`}>
       <div className="container mx-auto">
         <div className="text-center mb-10">
           <p className="font-handwritten text-primary text-2xl mb-2">Жизнь штаба</p>

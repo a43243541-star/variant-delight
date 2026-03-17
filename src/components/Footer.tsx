@@ -19,7 +19,7 @@ const Footer = () => {
   };
 
   return (
-    <footer id="footer" className="bg-deep text-deep-foreground pt-20 pb-8 relative overflow-hidden">
+    <footer ref={ref} id="footer" className={`bg-deep text-deep-foreground pt-20 pb-8 relative overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}>
       {/* Giant background text */}
       <span className="absolute bottom-[-5vw] left-1/2 -translate-x-1/2 font-display font-black text-[25vw] text-primary-foreground/[0.02] whitespace-nowrap pointer-events-none select-none">
         СГЮА

@@ -29,10 +29,11 @@ const courses = [
 ];
 
 const Training = () => {
+  const { ref: revealRef, isVisible } = useScrollReveal();
   const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section id="training" className="py-24 lg:py-32 relative overflow-hidden">
+    <section ref={revealRef} id="training" className={`py-24 lg:py-32 relative overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}>
       <div className="container mx-auto">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-12">

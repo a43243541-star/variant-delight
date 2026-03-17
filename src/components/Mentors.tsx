@@ -64,6 +64,7 @@ const Mentors = () => {
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default Mentors;
