@@ -38,7 +38,7 @@ const Mentors = () => {
                 <p className="font-display font-bold text-sm text-primary-foreground">Александр Козлов
 
                   </p>
-                <span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">Корпоративное право</span>
+<span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">ПРОКУРОРСКИЙ НАДЗОР</span>
               </div>
             </div>
             <p className="text-sm text-primary-foreground/80 italic">

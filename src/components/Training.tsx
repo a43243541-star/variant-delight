@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { ChevronRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import mentor1 from "/lovable-uploads/aaeee28c-0b55-4309-8d8d-ed9703171384.png";
-import mentor2 from "@/assets/mentor2.jpg";
+import mentor2 from "/lovable-uploads/f436f8ae-edcf-4b77-8b3d-a681038ee1fa.jpg";
 
 const courses = [
   {
