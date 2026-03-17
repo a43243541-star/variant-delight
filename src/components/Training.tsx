@@ -1,22 +1,22 @@
 import { useRef } from "react";
 import { ChevronRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import mentor1 from "@/assets/mentor1.jpg";
-import mentor2 from "@/assets/mentor2.jpg";
+import mentor1 from "/lovable-uploads/aaeee28c-0b55-4309-8d8d-ed9703171384.png";
+import mentor2 from "/lovable-uploads/f436f8ae-edcf-4b77-8b3d-a681038ee1fa.jpg";
 
 const courses = [
   {
     tag: "Практикум",
     title: "Legal Design: Как оформлять документы, чтобы их читали",
     desc: "Отказ от \"канцелярита\". Визуализация правовых структур и убедительная аргументация в суде.",
-    speaker: { name: "Иванов А.В.", role: "Партнер юр. фирмы", img: mentor1 },
+    speaker: { name: "Артин Василий", role: "Партнер юр. фирмы", img: mentor1 },
     even: false,
   },
   {
     tag: "Мастер-класс",
-    title: "Мастерство судебной речи. Психология убеждения",
+    title: "Мастерство судебной речи",
     desc: "Разбор реальных кейсов. Как держать внимание судьи и оппонентов.",
-    speaker: { name: "Смирнова Е.Д.", role: "Адвокат, выпускница 2010", img: mentor2 },
+    speaker: { name: "Волкова Татьяна", role: "Заместитель председателя Арбитражного суда Астраханской области, доктор юридических наук, профессор", img: mentor2 },
     even: true,
   },
   {
