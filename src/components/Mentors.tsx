@@ -5,11 +5,11 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const Mentors = () => {
   const { ref, isVisible } = useScrollReveal();
   return (
-  <section ref={ref} id="mentors" className={`py-24 lg:py-32 scroll-reveal ${isVisible ? "visible" : ""}`}>
+    <section ref={ref} id="mentors" className={`py-24 lg:py-32 scroll-reveal ${isVisible ? "visible" : ""}`}>
     <div className="container mx-auto">
       <div className="rounded-3xl p-8 md:p-12 lg:p-16 text-primary-foreground grid lg:grid-cols-2 gap-10 items-center relative overflow-hidden shadow-[0_30px_60px_rgba(0,71,255,0.2)]"
-        style={{ background: "linear-gradient(135deg, hsl(var(--primary)), #60A5FA)" }}
-      >
+        style={{ background: "linear-gradient(135deg, hsl(var(--primary)), #60A5FA)" }}>
+          
         {/* Left text */}
         <div>
           <p className="font-handwritten text-primary-foreground/80 text-2xl mb-2">Закрытый клуб</p>
@@ -29,13 +29,15 @@ const Mentors = () => {
         <div className="relative h-[300px] hidden md:block">
           {/* Card 1 */}
           <div
-            className="absolute top-0 left-0 w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] -rotate-[5deg] z-[2] hover:-translate-y-2 hover:rotate-0 hover:scale-105 hover:z-10 transition-all"
-            style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}
-          >
+              className="absolute top-0 left-0 w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] -rotate-[5deg] z-[2] hover:-translate-y-2 hover:rotate-0 hover:scale-105 hover:z-10 transition-all"
+              style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
+              
             <div className="flex items-center gap-3 mb-3">
-              <img src={mentor1} alt="Дмитрий Волков" className="w-12 h-12 rounded-full border-2 border-white object-cover" />
+              <img alt="Дмитрий Волков" className="w-12 h-12 rounded-full border-2 border-white object-cover" src="/lovable-uploads/a41f8955-1784-4f36-b6a3-3daa2e4aaf1c.jpg" />
               <div>
-                <p className="font-display font-bold text-sm text-primary-foreground">Дмитрий Волков</p>
+                <p className="font-display font-bold text-sm text-primary-foreground">Александр Козлов
+
+                  </p>
                 <span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">Корпоративное право</span>
               </div>
             </div>
@@ -45,14 +47,12 @@ const Mentors = () => {
           </div>
 
           {/* Card 2 */}
-          <div
-            className="absolute bottom-0 right-0 w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] rotate-[5deg] z-[1] hover:-translate-y-2 hover:rotate-0 hover:scale-105 hover:z-10 transition-all"
-            style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}
-          >
+          <div className="absolute bottom-0 right-0 w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] rotate-[5deg] z-[1] hover:-translate-y-2 hover:rotate-0 hover:scale-105 hover:z-10 transition-all" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
+              
             <div className="flex items-center gap-3 mb-3">
-              <img src={mentor2} alt="Анна Лебедева" className="w-12 h-12 rounded-full border-2 border-white object-cover" />
+              <img alt="Анна Лебедева" className="w-12 h-12 rounded-full border-2 border-white object-cover" src="/lovable-uploads/864924f1-4c52-4993-bbfb-b4fbdee64b7e.png" />
               <div>
-                <p className="font-display font-bold text-sm text-primary-foreground">Анна Лебедева</p>
+                <p className="font-display font-bold text-sm text-primary-foreground">Артин Василий</p>
                 <span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">Уголовный процесс</span>
               </div>
             </div>
@@ -63,8 +63,8 @@ const Mentors = () => {
         </div>
       </div>
     </div>
-  </section>
-  );
+  </section>);
+
 };
 
 export default Mentors;
