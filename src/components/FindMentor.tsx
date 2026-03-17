@@ -59,6 +59,21 @@ const FindMentor = () => {
   const { ref, isVisible } = useScrollReveal();
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedMentor, setSelectedMentor] = useState<typeof mentors[0] | null>(null);
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) return;
+    setSending(true);
+    setTimeout(() => {
+      toast.success(`Заявка отправлена наставнику ${selectedMentor?.name}!`);
+      setFormData({ name: "", email: "", message: "" });
+      setSelectedMentor(null);
+      setSending(false);
+    }, 600);
+  };
 
   const filtered = mentors.filter((m) => {
     const matchCategory = activeCategory === "all" || m.category === activeCategory;
