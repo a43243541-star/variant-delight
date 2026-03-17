@@ -1,4 +1,5 @@
 import associationImg from "@/assets/association.jpg";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const stats = [
   { value: "500+", label: "Активных резидентов штаба", color: "text-primary" },
@@ -8,12 +9,13 @@ const stats = [
 ];
 
 const About = () => {
+  const { ref, isVisible } = useScrollReveal();
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section id="about" className="py-24 lg:py-32 relative overflow-hidden">
+    <section ref={ref} id="about" className={`py-24 lg:py-32 relative overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}>
       {/* Background shapes */}
       <div className="bg-shape w-[400px] h-[400px] bg-primary/20 -top-[100px] -right-[100px]" />
       <div className="bg-shape w-[300px] h-[300px] bg-accent/15 bottom-[10%] -left-[50px]" style={{ animationDelay: "-5s" }} />

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import gallery1 from "@/assets/gallery1.jpg";
 import gallery2 from "@/assets/gallery2.jpg";
 import gallery3 from "@/assets/gallery3.jpg";
@@ -20,11 +21,12 @@ const photos: { src: string; title: string; subtitle: string; cat: Exclude<Categ
 const filters: Category[] = ["Все", "Обучения", "Форумы", "Неформальное"];
 
 const Gallery = () => {
+  const { ref, isVisible } = useScrollReveal();
   const [active, setActive] = useState<Category>("Все");
   const filtered = active === "Все" ? photos : photos.filter((p) => p.cat === active);
 
   return (
-    <section id="gallery" className="py-24 lg:py-32">
+    <section ref={ref} id="gallery" className={`py-24 lg:py-32 scroll-reveal ${isVisible ? "visible" : ""}`}>
       <div className="container mx-auto">
         <div className="text-center mb-10">
           <p className="font-handwritten text-primary text-2xl mb-2">Жизнь штаба</p>

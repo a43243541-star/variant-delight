@@ -1,8 +1,11 @@
 import mentor1 from "@/assets/mentor1.jpg";
 import mentor2 from "@/assets/mentor2.jpg";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const Mentors = () => (
-  <section id="mentors" className="py-24 lg:py-32">
+const Mentors = () => {
+  const { ref, isVisible } = useScrollReveal();
+  return (
+  <section ref={ref} id="mentors" className={`py-24 lg:py-32 scroll-reveal ${isVisible ? "visible" : ""}`}>
     <div className="container mx-auto">
       <div className="rounded-3xl p-8 md:p-12 lg:p-16 text-primary-foreground grid lg:grid-cols-2 gap-10 items-center relative overflow-hidden shadow-[0_30px_60px_rgba(0,71,255,0.2)]"
         style={{ background: "linear-gradient(135deg, hsl(var(--primary)), #60A5FA)" }}
@@ -61,6 +64,7 @@ const Mentors = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default Mentors;
