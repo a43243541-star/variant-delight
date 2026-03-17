@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Hero = () => {
   const scrollTo = (id: string) => {
