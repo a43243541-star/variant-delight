@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
