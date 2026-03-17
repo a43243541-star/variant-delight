@@ -29,9 +29,9 @@ const About = () => {
 Опыт выпускников<br />
               <span className="text-primary">Опыт выпускников.</span>
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Мы — мост между студенчеством и реальной юридической практикой. Наша цель — помочь
-              молодым специалистам найти свой путь, опираясь на поддержку тех, кто уже прошел эту школу и стал лидером отрасли.
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">Мы — мост между студенчеством и реальной юридической практикой. Наша цель — помочь молодым специалистам найти свой путь, опираясь на поддержку тех, кто уже прошел эту школу и стал лидером отрасли
+
+
             </p>
             <button
               onClick={() => scrollTo("#history")}
@@ -46,12 +46,12 @@ const About = () => {
             {/* Image with rotation */}
             <div className="relative rounded-3xl p-3 bg-card shadow-float rotate-2 mb-10">
               <img
-                src={associationImg}
+
                 alt="Команда штаба"
-                className="w-full rounded-2xl block h-[300px] object-cover" />
+                className="w-full rounded-2xl block h-[300px] object-cover" src="/lovable-uploads/4f4d3394-03b9-40de-98fa-16a2f2ec4cfb.jpg" />
               
-              <div className="absolute -bottom-5 -left-5 bg-deep text-deep-foreground p-5 rounded-full font-display font-extrabold w-[100px] h-[100px] flex items-center justify-center text-center text-xs shadow-[0_10px_20px_rgba(10,25,48,0.3)] -rotate-[10deg] leading-tight">
-                С 1931 года
+              <div className="absolute -bottom-5 -left-5 bg-deep text-deep-foreground p-5 rounded-full font-display font-extrabold w-[100px] h-[100px] flex items-center justify-center text-center text-xs shadow-[0_10px_20px_rgba(10,25,48,0.3)] -rotate-[10deg] leading-tight">С 2021 года
+
               </div>
             </div>
 

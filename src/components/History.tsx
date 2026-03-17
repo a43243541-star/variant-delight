@@ -13,11 +13,11 @@ const History = () => {
     if (!sliderRef.current || !dragging.current) return;
     const rect = sliderRef.current.getBoundingClientRect();
     const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
-    setSliderPos((x / rect.width) * 100);
+    setSliderPos(x / rect.width * 100);
   }, []);
 
-  const handleMouseDown = () => { dragging.current = true; };
-  const handleMouseUp = () => { dragging.current = false; };
+  const handleMouseDown = () => {dragging.current = true;};
+  const handleMouseUp = () => {dragging.current = false;};
   const handleMouseMove = (e: React.MouseEvent) => handleMove(e.clientX);
   const handleTouchMove = (e: React.TouchEvent) => handleMove(e.touches[0].clientX);
 
@@ -28,9 +28,9 @@ const History = () => {
         <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold text-primary-foreground tracking-tight mb-4">
           Сила братства СЮИ-СГАП-СГЮА
         </h2>
-        <p className="text-lg text-primary-foreground/70 max-w-[700px] mx-auto mb-4">
-          Наша Альма-матер выпустила тысячи выдающихся судей, адвокатов и госслужащих.
-          Ассоциация — это закрытое комьюнити, где статус выпускника открывает любые двери.
+        <p className="text-lg text-primary-foreground/70 max-w-[700px] mx-auto mb-4">Наша Альма-матер выпустила тысячи выдающихся судей, адвокатов и госслужащих. Ассоциация — это закрытое комьюнити, где статус выпускника открывает любые двери
+
+
         </p>
 
         {/* Comparison slider */}
@@ -43,29 +43,29 @@ const History = () => {
           onMouseMove={handleMouseMove}
           onTouchStart={handleMouseDown}
           onTouchEnd={handleMouseUp}
-          onTouchMove={handleTouchMove}
-        >
+          onTouchMove={handleTouchMove}>
+          
           {/* New image (full) */}
           <img src={historyNew} alt="Современный вуз" className="absolute inset-0 w-full h-full object-cover object-center" />
           
           {/* Old image (clipped) */}
           <div
             className="absolute top-0 left-0 bottom-0 overflow-hidden z-[2]"
-            style={{ width: `${sliderPos}%`, borderRight: "4px solid hsl(var(--primary))" }}
-          >
+            style={{ width: `${sliderPos}%`, borderRight: "4px solid hsl(var(--primary))" }}>
+            
             <img
               src={historyOld}
               alt="Исторический вуз"
               className="h-full object-cover object-left-center sepia-[0.6] grayscale-[0.5]"
-              style={{ width: sliderRef.current?.offsetWidth || "100vw" }}
-            />
+              style={{ width: sliderRef.current?.offsetWidth || "100vw" }} />
+            
           </div>
 
           {/* Slider handle */}
           <div
             className="absolute top-1/2 -translate-y-1/2 z-[3] w-9 h-9 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-sm shadow-lg pointer-events-none"
-            style={{ left: `${sliderPos}%`, transform: `translate(-50%, -50%)` }}
-          >
+            style={{ left: `${sliderPos}%`, transform: `translate(-50%, -50%)` }}>
+            
             ↔
           </div>
         </div>
@@ -74,8 +74,8 @@ const History = () => {
           Потяните ползунок, чтобы увидеть связь времен
         </p>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default History;
