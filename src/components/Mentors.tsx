@@ -16,10 +16,10 @@ const Mentors = () => {
           <h2 className="text-[clamp(2rem,3.5vw,3.5rem)] font-display font-extrabold text-primary-foreground tracking-tight mb-4">
             Найди своего Наставника
           </h2>
-          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">
-            Получи персональные советы по построению карьеры от успешных выпускников СГЮА.
-            Партнеры фирм, судьи, бизнесмены готовы делиться опытом.
-          </p>
+          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">Получи персональные советы по построению карьеры от успешных выпускников СГЮА. Партнеры фирм, судьи, бизнесмены готовы делиться опытом
+
+
+            </p>
           <button className="inline-flex items-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-card text-deep shadow-card hover:-translate-y-1 hover:shadow-float transition-all border-none cursor-pointer">
             Смотреть анкеты менторов
           </button>

@@ -29,8 +29,10 @@ const Footer = () => {
         <div className="grid sm:grid-cols-1 lg:grid-cols-[2fr_1fr_1.5fr] gap-10 mb-16">
           {/* Brand */}
           <div>
-            <h3 className="font-display text-[2.5rem] font-extrabold text-primary-foreground mb-4 leading-tight">
-              Присоединяйся<br />к лучшим.
+            <h3 className="font-display text-[2.5rem] font-extrabold text-primary-foreground mb-4 leading-tight">Присоединяйся
+к лучшим
+
+              <br />к лучшим.
             </h3>
             <p className="text-primary-foreground/70 text-base leading-relaxed max-w-md">
               Молодежный штаб Ассоциации выпускников СГЮА. Твой социальный лифт в мире юриспруденции.
@@ -43,21 +45,19 @@ const Footer = () => {
               Навигация
             </h4>
             <ul className="list-none space-y-3">
-              {[
-                { label: "О штабе", href: "#about" },
-                { label: "Об Ассоциации", href: "#history" },
-                { label: "Обучения", href: "#training" },
-                { label: "Фотографии", href: "#gallery" },
-              ].map((l) => (
-                <li key={l.href}>
+              {[{ label: "О штабе", href: "#about" }, { label: "Об Ассоциации", href: "#history" },
+              { label: "Обучения", href: "#training" },
+              { label: "Фотографии", href: "#gallery" }].
+              map((l) =>
+              <li key={l.href}>
                   <button
-                    onClick={() => scrollTo(l.href)}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors bg-transparent border-none cursor-pointer text-base"
-                  >
+                  onClick={() => scrollTo(l.href)}
+                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors bg-transparent border-none cursor-pointer text-base">
+                  
                     {l.label}
                   </button>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
 
@@ -66,8 +66,8 @@ const Footer = () => {
             <h4 className="font-display text-xs font-bold uppercase tracking-widest text-primary-foreground/40 mb-5">
               Будь в курсе
             </h4>
-            <p className="text-primary-foreground/70 text-base mb-4 leading-relaxed">
-              Не пропусти старт новых обучений и встреч с именитыми выпускниками.
+            <p className="text-primary-foreground/70 text-base mb-4 leading-relaxed">Не пропусти старт новых обучений и встреч с именитыми выпускниками
+
             </p>
             <form onSubmit={handleSubmit} className="flex gap-1 bg-primary-foreground/10 p-1 rounded-pill mb-5">
               <input
@@ -75,12 +75,12 @@ const Footer = () => {
                 placeholder="Твой E-mail"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 bg-transparent border-none px-4 py-2 text-primary-foreground outline-none placeholder:text-primary-foreground/50 text-sm"
-              />
+                className="flex-1 bg-transparent border-none px-4 py-2 text-primary-foreground outline-none placeholder:text-primary-foreground/50 text-sm" />
+              
               <button
                 type="submit"
-                className="bg-card text-deep border-none px-5 py-2 rounded-pill font-bold cursor-pointer hover:scale-105 transition-transform text-sm"
-              >
+                className="bg-card text-deep border-none px-5 py-2 rounded-pill font-bold cursor-pointer hover:scale-105 transition-transform text-sm">
+                
                 →
               </button>
             </form>
@@ -97,8 +97,8 @@ const Footer = () => {
           <p>г. Саратов, ул. Чернышевского, 104</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;
