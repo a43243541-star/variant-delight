@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import gallery1 from "@/assets/gallery1.jpg";
-import gallery2 from "@/assets/gallery2.jpg";
 import gallery3 from "@/assets/gallery3.jpg";
 
-import gallery7 from "@/assets/gallery7.jpg";
-import gallery8 from "@/assets/gallery8.jpg";
 
 type Category = "Все" | "Обучения" | "Форумы" | "Неформальное";
 
@@ -15,7 +11,7 @@ const photos: { src: string; title: string; subtitle: string; cat: Exclude<Categ
   { src: "/lovable-uploads/b3420278-3f65-446e-9ccb-dea71e642bad.jpg", title: "Лидеры права на ПМЮФ", subtitle: "\n", cat: "Обучения", tall: false },
   { src: "/lovable-uploads/a44958e4-c24f-4103-a79f-09362e78214f.jpg", title: "Награждение Молодежного штаба Ассоциации выпускников \"СЮИ-СГАП-СГЮА\"", subtitle: "\n", cat: "Обучения", tall: true },
   { src: "/lovable-uploads/26d78a20-c191-46eb-84e7-1f1886835840.jpg", title: "Школа молодого юриста - 2025", subtitle: "\n", cat: "Форумы", tall: false },
-  { src: gallery1, title: "Семинар Legal Design", subtitle: "Интерактивный практикум", cat: "Обучения", tall: false },
+  { src: "/lovable-uploads/9f018789-6854-4c56-8c89-c392290b629b.jpg", title: "Телемост с молодыми специалистами", subtitle: "Диалог на равных", cat: "Обучения", tall: false },
 ];
 
 const filters: Category[] = ["Все", "Обучения", "Форумы", "Неформальное"];
