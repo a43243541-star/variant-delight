@@ -12,7 +12,7 @@ const photos: { src: string; title: string; subtitle: string; cat: Exclude<Categ
   { src: "/lovable-uploads/a44958e4-c24f-4103-a79f-09362e78214f.jpg", title: "Награждение Молодежного штаба Ассоциации выпускников \"СЮИ-СГАП-СГЮА\"", subtitle: "\n", cat: "Обучения", tall: true },
   { src: "/lovable-uploads/26d78a20-c191-46eb-84e7-1f1886835840.jpg", title: "Школа молодого юриста - 2025", subtitle: "\n", cat: "Форумы", tall: false },
   { src: "/lovable-uploads/9f018789-6854-4c56-8c89-c392290b629b.jpg", title: "Телемост с молодыми специалистами", subtitle: "Диалог на равных", cat: "Обучения", tall: false },
-  { src: "/placeholder.svg", title: "Новое событие", subtitle: "Описание", cat: "Обучения", tall: false },
+  { src: "/lovable-uploads/saratov-forum.jpg", title: "Саратовский юридический форум", subtitle: "\n", cat: "Форумы", tall: false },
 ];
 
 const filters: Category[] = ["Все", "Обучения", "Форумы", "Неформальное"];
