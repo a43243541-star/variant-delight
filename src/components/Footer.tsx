@@ -86,7 +86,7 @@ const Footer = () => {
             </form>
             <div className="flex gap-4">
               <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-semibold text-sm">Telegram</a>
-              <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-semibold text-sm">ВКонтакте</a>
+              <a href="https://vk.com/avsgua" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-semibold text-sm">ВКонтакте</a>
             </div>
           </div>
         </div>
