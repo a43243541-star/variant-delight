@@ -16,7 +16,7 @@ const projects = [
   },
   {
     icon: BookOpen,
-    title: "Legal Design Lab",
+    title: "Юридическое проектирование",
     desc: "Практикум по визуализации правовых документов: учимся делать юридические тексты понятными, современными и убедительными.",
     accent: "from-primary/20 to-primary/5",
   },
