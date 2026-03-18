@@ -18,11 +18,11 @@ const mentors = [
 {
   name: "Артин Василий",
   img: "/lovable-uploads/928f8173-c80f-49fe-9679-269667029d4f.png",
-  specialty: "Уголовный процесс",
+  specialty: "НЕСОСТОЯТЕЛЬНОСТЬ\nИ БАНКРОТСТВО",
   category: "criminal",
   role: "Руководитель команды арбитражных управляющих, основатель Группы Компаний «Федеральная Экспертная Служба», кандидат юридических наук, ",
   experience: "16 лет",
-  quote: "Готов взять под крыло",
+  quote: "Готов взять под крыло 2 студентов: пройдем путь от траектории арбитража до архитектуры антикризистного менеджмента вместе",
   available: true
 },
 {
@@ -163,7 +163,7 @@ const FindMentor = () => {
               {/* Info */}
               <div className="px-5 pt-10 pb-6 text-center">
                 <h3 className="font-display font-bold text-lg text-foreground mb-1">{mentor.name}</h3>
-                <span className="inline-block text-xs bg-primary/10 text-primary px-3 py-1 rounded-pill font-bold font-display uppercase mb-2">
+                <span className="inline-block text-xs bg-primary/10 text-primary px-3 py-1 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
                   {mentor.specialty}
                 </span>
                 <p className="text-sm mb-1 text-muted-foreground whitespace-pre-line">{mentor.role}</p>
