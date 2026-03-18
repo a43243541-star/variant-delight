@@ -30,7 +30,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="font-display text-[2.5rem] font-extrabold text-primary-foreground mb-4 leading-tight">
-<br />к лучшим.
+<br />
             </h3>
             <p className="text-primary-foreground/70 text-base leading-relaxed max-w-md">
               Твой социальный лифт в мире юриспруденции
