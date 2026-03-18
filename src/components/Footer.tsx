@@ -46,7 +46,7 @@ const Footer = () => {
             </h4>
             <ul className="list-none space-y-3">
               {[{ label: "О штабе", href: "#about" }, { label: "Об Ассоциации", href: "#history" },
-              { label: "Обучения", href: "#training" },
+              
               { label: "Фотографии", href: "#gallery" }].
               map((l) =>
               <li key={l.href}>
