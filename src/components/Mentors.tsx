@@ -33,12 +33,12 @@ const Mentors = () => {
               style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
               
             <div className="flex items-center gap-3 mb-3">
-              <img alt="Дмитрий Волков" className="w-12 h-12 rounded-full border-2 border-white object-cover" src="/lovable-uploads/a41f8955-1784-4f36-b6a3-3daa2e4aaf1c.jpg" />
+              <img alt="Дмитрий Волков" className="w-12 h-12 rounded-full border-2 border-white object-cover" src="/lovable-uploads/2bf6a6d0-bcbe-41de-b98a-0245a7063371.jpg" />
               <div>
                 <p className="font-display font-bold text-sm text-primary-foreground">Алексей Несудимов
 
                   </p>
-<span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">ПРОКУРОРСКИЙ НАДЗОР</span>
+<span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">АДВОКАТУРА</span>
               </div>
             </div>
             <p className="text-sm text-primary-foreground/80 italic">
@@ -50,7 +50,7 @@ const Mentors = () => {
           <div className="absolute bottom-0 right-0 w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] rotate-[5deg] z-[1] hover:-translate-y-2 hover:rotate-0 hover:scale-105 hover:z-10 transition-all" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
               
             <div className="flex items-center gap-3 mb-3">
-              <img alt="Анна Лебедева" className="w-12 h-12 rounded-full border-2 border-white object-cover" src="/lovable-uploads/864924f1-4c52-4993-bbfb-b4fbdee64b7e.png" />
+              <img alt="Анна Лебедева" className="w-12 h-12 rounded-full border-2 border-white object-cover" src="/lovable-uploads/57ae51d8-a0b5-4d62-b077-8d3b0a5a4d08.jpg" />
               <div>
                 <p className="font-display font-bold text-sm text-primary-foreground">Артин Василий</p>
                 <span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">Уголовный процесс</span>
