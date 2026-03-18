@@ -54,9 +54,9 @@ const Mentors = () => {
                 <span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">ФИНАНСОВАЯ АНАЛИТКА</span>
               </div>
             </div>
-            <p className="text-sm text-primary-foreground/80 italic">
-              "Готова взять 2 студентов для разбора реальных судебных кейсов."
-            </p>
+            <p className="text-sm text-primary-foreground/80 italic">"Научу архитектуре личного капитала: от студенческого бюджета до инвестиционного портфеля."
+
+              </p>
           </div>
         </div>
       </div>
