@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { label: "О штабе", href: "#about" },
   { label: "Об Ассоциации", href: "#history" },
-  { label: "Обучения", href: "#training" },
+  
   { label: "Наставники", href: "#find-mentor" },
   { label: "События", href: "#gallery" },
 ];
