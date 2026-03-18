@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logoShield from "@/assets/logo-shield.png";
 
 const navLinks = [
   { label: "О штабе", href: "#about" },
