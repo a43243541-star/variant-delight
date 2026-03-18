@@ -6,6 +6,7 @@ const navLinks = [
   { label: "Об Ассоциации", href: "#history" },
   
   { label: "Наставники", href: "#find-mentor" },
+  { label: "Проекты", href: "#projects" },
   { label: "События", href: "#gallery" },
 ];
 
