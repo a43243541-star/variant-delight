@@ -57,7 +57,7 @@ const History = () => {
 
               alt="Исторический вуз"
               className="h-full object-cover object-left-center sepia-[0.6] grayscale-[0.5]"
-              style={{ width: sliderRef.current?.offsetWidth || "100vw" }} src="/lovable-uploads/0288c6e3-4e6c-4a4b-8d1e-d758bb64625d.jpg" />
+              style={{ width: sliderRef.current?.offsetWidth || "100vw" }} src="/lovable-uploads/history-old-clean.jpg" />
             
           </div>
 
