@@ -54,6 +54,11 @@ const Hero = () => {
           </button>
         </div>
       </div>
+
+      {/* Footer image */}
+      <div className="absolute bottom-0 left-0 w-full z-[2]">
+        <img src={heroFooter} alt="Саратовский юридический форум" className="w-full h-auto object-cover max-h-[200px]" />
+      </div>
     </section>);
 
 };
