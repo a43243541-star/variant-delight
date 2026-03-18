@@ -35,9 +35,7 @@ const Mentors = () => {
             <div className="flex items-center gap-3 mb-3">
               <img alt="Дмитрий Волков" className="w-12 h-12 rounded-full border-2 border-white object-cover" src="/lovable-uploads/2bf6a6d0-bcbe-41de-b98a-0245a7063371.jpg" />
               <div>
-                <p className="font-display font-bold text-sm text-primary-foreground">Алексей Несудимов
-
-                  </p>
+                <p className="font-display font-bold text-sm text-primary-foreground">Несудимов Алексей</p>
 <span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">АДВОКАТУРА</span>
               </div>
             </div>
