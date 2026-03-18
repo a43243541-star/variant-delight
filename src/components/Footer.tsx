@@ -29,8 +29,8 @@ const Footer = () => {
         <div className="grid sm:grid-cols-1 lg:grid-cols-[2fr_1fr_1.5fr] gap-10 mb-16">
           {/* Brand */}
           <div>
-            <h3 className="font-display text-[2.5rem] font-extrabold text-primary-foreground mb-4 leading-tight">Присоединяйся
-к лучшим
+            <h3 className="font-display text-[2.5rem] font-extrabold text-primary-foreground mb-4 leading-tight">Присоединяйся к лучшим
+
 
               <br />к лучшим.
             </h3>
