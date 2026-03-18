@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logoShield from "@/assets/logo-shield.png";
 
 const navLinks = [
   { label: "О штабе", href: "#about" },
@@ -42,9 +43,7 @@ const Header = () => {
           className="flex items-center gap-3 font-display font-extrabold text-lg text-deep no-underline"
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
         >
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display font-extrabold text-sm">
-            Ш
-          </div>
+          <img src={logoShield} alt="Штаб СГЮА" className="w-10 h-10 object-contain" />
           Штаб СГЮА
         </a>
 
