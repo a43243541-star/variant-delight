@@ -3,20 +3,20 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import gallery1 from "@/assets/gallery1.jpg";
 import gallery2 from "@/assets/gallery2.jpg";
 import gallery3 from "@/assets/gallery3.jpg";
-import gallery5 from "@/assets/gallery5.jpg";
+
 import gallery7 from "@/assets/gallery7.jpg";
 import gallery8 from "@/assets/gallery8.jpg";
 
 type Category = "Все" | "Обучения" | "Форумы" | "Неформальное";
 
-const photos: {src: string;title: string;subtitle: string;cat: Exclude<Category, "Все">;tall?: boolean;}[] = [
-
-{ src: gallery2, title: "Нетворкинг-сессия", subtitle: "Встреча с выпускниками 2015 года", cat: "Неформальное", tall: true },
-{ src: gallery5, title: "Мастер-класс в суде", subtitle: "Практическое занятие", cat: "Обучения", tall: false },
-{ src: gallery7, title: "Хакатон LegalTech", subtitle: "Командная работа студентов", cat: "Обучения", tall: true },
-{ src: gallery8, title: "Награждение", subtitle: "Итоги года Ассоциации", cat: "Форумы", tall: false },
-{ src: gallery1, title: "Семинар Legal Design", subtitle: "Интерактивный практикум", cat: "Обучения", tall: false }];
-
+const photos: { src: string; title: string; subtitle: string; cat: Exclude<Category, "Все">; tall?: boolean }[] = [
+  { src: gallery3, title: "\n", subtitle: "", cat: "Форумы", tall: false },
+  { src: "/lovable-uploads/d5a716e4-34b8-4404-b405-51bb34374f66.jpg", title: "Диалог на равных с сотрудником прокуратуры", subtitle: "Встреча с выпускником 2025 года", cat: "Неформальное", tall: true },
+  { src: "/lovable-uploads/b3420278-3f65-446e-9ccb-dea71e642bad.jpg", title: "Лидеры права на ПМЮФ", subtitle: "\n", cat: "Обучения", tall: false },
+  { src: "/lovable-uploads/a44958e4-c24f-4103-a79f-09362e78214f.jpg", title: "Награждение Молодежного штаба Ассоциации выпускников \"СЮИ-СГАП-СГЮА\"", subtitle: "\n", cat: "Обучения", tall: true },
+  { src: "/lovable-uploads/26d78a20-c191-46eb-84e7-1f1886835840.jpg", title: "Школа молодого юриста - 2025", subtitle: "\n", cat: "Форумы", tall: false },
+  { src: gallery1, title: "Семинар Legal Design", subtitle: "Интерактивный практикум", cat: "Обучения", tall: false },
+];
 
 const filters: Category[] = ["Все", "Обучения", "Форумы", "Неформальное"];
 
@@ -37,43 +37,43 @@ const Gallery = () => {
 
         {/* Filters */}
         <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {filters.map((f) =>
-          <button
-            key={f}
-            onClick={() => setActive(f)}
-            className={`px-5 py-3 rounded-pill font-semibold text-sm border-2 transition-all cursor-pointer ${
-            active === f ?
-            "bg-deep text-deep-foreground border-deep" :
-            "bg-transparent text-muted-foreground border-border hover:bg-deep hover:text-deep-foreground hover:border-deep"}`
-            }>
-            
+          {filters.map((f) => (
+            <button
+              key={f}
+              onClick={() => setActive(f)}
+              className={`px-5 py-3 rounded-pill font-semibold text-sm border-2 transition-all cursor-pointer ${
+                active === f
+                  ? "bg-deep text-deep-foreground border-deep"
+                  : "bg-transparent text-muted-foreground border-border hover:bg-deep hover:text-deep-foreground hover:border-deep"
+              }`}
+            >
               {f}
             </button>
-          )}
+          ))}
         </div>
 
         {/* Masonry */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-5">
-          {filtered.map((p) =>
-          <div
-            key={p.src + p.title}
-            className="break-inside-avoid mb-5 rounded-2xl overflow-hidden relative cursor-pointer group">
-            
+          {filtered.map((p) => (
+            <div
+              key={p.src + p.title}
+              className="break-inside-avoid mb-5 rounded-2xl overflow-hidden relative cursor-pointer group"
+            >
               <img
-              src={p.src}
-              alt={p.title}
-              className="w-full block transition-transform duration-500 group-hover:scale-105" />
-            
-              <div className="absolute bottom-0 left-0 w-full px-5 pb-4 pt-12 bg-gradient-to-t from-black/80 to-transparent text-primary-foreground translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 font-sans font-bold text-base">
-                <p className="font-display font-bold text-base">{p.title}</p>
+                src={p.src}
+                alt={p.title}
+                className="w-full block transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute bottom-0 left-0 w-full px-5 pb-4 pt-12 bg-gradient-to-t from-black/80 to-transparent text-primary-foreground translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <p className="font-display font-bold text-sm">{p.title}</p>
                 <p className="text-xs text-primary-foreground/70">{p.subtitle}</p>
               </div>
             </div>
-          )}
+          ))}
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default Gallery;
