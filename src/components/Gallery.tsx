@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import gallery3 from "@/assets/gallery3.jpg";
+
 
 
 type Category = "Все" | "Обучения" | "Форумы" | "Неформальное";
