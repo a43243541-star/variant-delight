@@ -35,8 +35,8 @@ const Footer = () => {
               <br />к лучшим.
             </h3>
             <p className="text-primary-foreground/70 text-base leading-relaxed max-w-md">
-
-</p>
+              Твой социальный лифт в мире юриспруденции
+            </p>
           </div>
 
           {/* Nav */}
