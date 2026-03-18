@@ -61,7 +61,7 @@ const Gallery = () => {
               <img
                 src={p.src}
                 alt={p.title}
-                className="w-full block transition-transform duration-500 group-hover:scale-105"
+                className="w-full block transition-transform duration-500 group-hover:scale-105 object-cover max-h-[320px]"
               />
               <div className="absolute bottom-0 left-0 w-full px-5 pb-4 pt-12 bg-gradient-to-t from-black/80 to-transparent text-primary-foreground translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                 <p className="font-display font-bold text-sm">{p.title}</p>
