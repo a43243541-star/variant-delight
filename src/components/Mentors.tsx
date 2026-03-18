@@ -16,7 +16,7 @@ const Mentors = () => {
           <h2 className="text-[clamp(2rem,3.5vw,3.5rem)] font-display font-extrabold text-primary-foreground tracking-tight mb-4">
             Найди своего Наставника
           </h2>
-          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">Получи персональные советы по построению карьеры от успешных выпускников СГЮА. Партнеры фирм, судьи, бизнесмены готовы делиться опытом
+          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">Получи персональные советы по построению карьеры от успешных выпускников СГЮА. Партнеры фирм, представители адвокатского сообщества, судьи, прокуроры, бизнес-сообщества готовы делиться опытом
 
 
             </p>

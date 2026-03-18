@@ -25,10 +25,10 @@ const History = () => {
     <section ref={revealRef} id="history" className={`py-24 lg:py-32 bg-deep text-deep-foreground relative overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}>
       <div className="container mx-auto text-center">
         <p className="font-handwritten text-primary text-2xl mb-2">Наследие</p>
-        <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold text-primary-foreground tracking-tight mb-4">
-          Сила братства СЮИ-СГАП-СГЮА
+        <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold text-primary-foreground tracking-tight mb-4">Сила поколений СЮИ-СГАП-СГЮА
+
         </h2>
-        <p className="text-lg text-primary-foreground/70 max-w-[700px] mx-auto mb-4">Наша Альма-матер выпустила тысячи выдающихся судей, адвокатов и госслужащих. Ассоциация — это закрытое комьюнити, где статус выпускника открывает любые двери
+        <p className="text-lg text-primary-foreground/70 max-w-[700px] mx-auto mb-4">Наша Альма-матер выпустила тысячи выдающихся юристов
 
 
         </p>
