@@ -10,8 +10,8 @@ import gallery8 from "@/assets/gallery8.jpg";
 type Category = "Все" | "Обучения" | "Форумы" | "Неформальное";
 
 const photos: { src: string; title: string; subtitle: string; cat: Exclude<Category, "Все">; tall?: boolean }[] = [
-  { src: gallery3, title: "Диалог на равных", subtitle: "", cat: "Форумы", tall: false },
-  { src: gallery2, title: "Нетворкинг-сессия", subtitle: "Встреча с выпускниками 2015 года", cat: "Неформальное", tall: true },
+  { src: gallery3, title: "\n", subtitle: "", cat: "Форумы", tall: false },
+  { src: "/lovable-uploads/d5a716e4-34b8-4404-b405-51bb34374f66.jpg", title: "Диалог на равных с сотрудником прокуратуры", subtitle: "Встреча с выпускником 2025 года", cat: "Неформальное", tall: true },
   { src: gallery5, title: "Мастер-класс в суде", subtitle: "Практическое занятие", cat: "Обучения", tall: false },
   { src: gallery7, title: "Хакатон LegalTech", subtitle: "Командная работа студентов", cat: "Обучения", tall: true },
   { src: gallery8, title: "Награждение", subtitle: "Итоги года Ассоциации", cat: "Форумы", tall: false },
