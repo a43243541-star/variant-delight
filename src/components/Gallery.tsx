@@ -10,9 +10,9 @@ const photos: { src: string; title: string; subtitle: string; cat: Exclude<Categ
   { src: "/lovable-uploads/d5a716e4-34b8-4404-b405-51bb34374f66.jpg", title: "Диалог на равных с сотрудником прокуратуры", subtitle: "Встреча с выпускником 2025 года", cat: "Неформальное", tall: true },
   { src: "/lovable-uploads/b3420278-3f65-446e-9ccb-dea71e642bad.jpg", title: "Лидеры права на ПМЮФ", subtitle: "\n", cat: "Обучения", tall: false },
   { src: "/lovable-uploads/a44958e4-c24f-4103-a79f-09362e78214f.jpg", title: "Награждение Молодежного штаба Ассоциации выпускников \"СЮИ-СГАП-СГЮА\"", subtitle: "\n", cat: "Обучения", tall: true },
+  { src: "/lovable-uploads/saratov-forum.jpg", title: "Саратовский юридический форум", subtitle: "\n", cat: "Форумы", tall: false },
   { src: "/lovable-uploads/26d78a20-c191-46eb-84e7-1f1886835840.jpg", title: "Школа молодого юриста - 2025", subtitle: "\n", cat: "Форумы", tall: false },
   { src: "/lovable-uploads/9f018789-6854-4c56-8c89-c392290b629b.jpg", title: "Телемост с молодыми специалистами", subtitle: "Диалог на равных", cat: "Обучения", tall: false },
-  { src: "/lovable-uploads/saratov-forum.jpg", title: "Саратовский юридический форум", subtitle: "\n", cat: "Форумы", tall: false },
   { src: "/lovable-uploads/association-award.jpg", title: "Награждение Ассоциации выпускников", subtitle: "", cat: "Форумы", tall: false },
   { src: "/lovable-uploads/charity-event.jpg", title: "Благотворительное мероприятие", subtitle: "", cat: "Неформальное", tall: false },
 ];
