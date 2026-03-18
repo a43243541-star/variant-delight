@@ -13,7 +13,7 @@ const photos: { src: string; title: string; subtitle: string; cat: Exclude<Categ
   { src: gallery3, title: "\n", subtitle: "", cat: "Форумы", tall: false },
   { src: "/lovable-uploads/d5a716e4-34b8-4404-b405-51bb34374f66.jpg", title: "Диалог на равных с сотрудником прокуратуры", subtitle: "Встреча с выпускником 2025 года", cat: "Неформальное", tall: true },
   { src: gallery5, title: "Мастер-класс в суде", subtitle: "Практическое занятие", cat: "Обучения", tall: false },
-  { src: gallery7, title: "Хакатон LegalTech", subtitle: "Командная работа студентов", cat: "Обучения", tall: true },
+  { src: "/lovable-uploads/a44958e4-c24f-4103-a79f-09362e78214f.jpg", title: "Награждение Молодежного штаба Ассоциации выпускников \"СЮИ-СГАП-СГЮА\"", subtitle: "\n", cat: "Обучения", tall: true },
   { src: "/lovable-uploads/26d78a20-c191-46eb-84e7-1f1886835840.jpg", title: "Школа молодого юриста - 2025", subtitle: "\n", cat: "Форумы", tall: false },
   { src: gallery1, title: "Семинар Legal Design", subtitle: "Интерактивный практикум", cat: "Обучения", tall: false },
 ];
