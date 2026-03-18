@@ -46,7 +46,7 @@ const Footer = () => {
             </h4>
             <ul className="list-none space-y-3">
               {[{ label: "О штабе", href: "#about" }, { label: "Об Ассоциации", href: "#history" },
-              
+
               { label: "Фотографии", href: "#gallery" }].
               map((l) =>
               <li key={l.href}>
@@ -85,15 +85,15 @@ const Footer = () => {
               </button>
             </form>
             <div className="flex gap-4">
-              <a href="https://t.me/ssla_av" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-semibold text-sm">Telegram</a>
-              <a href="https://vk.com/avsgua" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-semibold text-sm">ВКонтакте</a>
+              <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-semibold text-sm">Telegram</a>
+              <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-semibold text-sm">ВКонтакте</a>
             </div>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="border-t border-primary-foreground/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-primary-foreground/50">
-          <p>© 2024 Молодежный штаб СГЮА. Все права защищены.</p>
+          <p>© 2024 Молодежный штаб Ассоциации выпускников "СЮИ-СГАП-СГЮА".  Все права защищены.</p>
           <p>г. Саратов, ул. Чернышевского, 104</p>
         </div>
       </div>
