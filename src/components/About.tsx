@@ -2,7 +2,7 @@ import associationImg from "@/assets/association.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const stats = [
-{ value: "500+", label: "Активных резидентов штаба", color: "text-primary" },
+{ value: "100+", label: "Активных резидентов штаба", color: "text-primary" },
 { value: "45", label: "Реализованных проектов", color: "text-accent" },
 { value: "10k", label: "Часов полезного нетворкинга", color: "text-primary" },
 { value: "100%", label: "Заряд на успех", color: "text-accent" }];
