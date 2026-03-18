@@ -10,7 +10,7 @@ import gallery8 from "@/assets/gallery8.jpg";
 type Category = "Все" | "Обучения" | "Форумы" | "Неформальное";
 
 const photos: { src: string; title: string; subtitle: string; cat: Exclude<Category, "Все">; tall?: boolean }[] = [
-  { src: gallery3, title: "Форум молодых юристов", subtitle: "Дискуссия о будущем права", cat: "Форумы", tall: false },
+  { src: gallery3, title: "Диалог на равных", subtitle: "", cat: "Форумы", tall: false },
   { src: gallery2, title: "Нетворкинг-сессия", subtitle: "Встреча с выпускниками 2015 года", cat: "Неформальное", tall: true },
   { src: gallery5, title: "Мастер-класс в суде", subtitle: "Практическое занятие", cat: "Обучения", tall: false },
   { src: gallery7, title: "Хакатон LegalTech", subtitle: "Командная работа студентов", cat: "Обучения", tall: true },
