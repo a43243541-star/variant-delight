@@ -1,5 +1,4 @@
 import heroBg from "@/assets/hero-bg.jpg";
-import heroFooter from "@/assets/hero-footer.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Hero = () => {
@@ -53,11 +52,6 @@ const Hero = () => {
             Ближайшие события
           </button>
         </div>
-      </div>
-
-      {/* Footer image */}
-      <div className="absolute bottom-0 left-0 w-full z-[2]">
-        <img src={heroFooter} alt="Саратовский юридический форум" className="w-full h-auto object-cover max-h-[200px]" />
       </div>
     </section>);
 
