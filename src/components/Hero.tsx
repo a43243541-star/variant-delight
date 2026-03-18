@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import heroFooter from "@/assets/hero-footer.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Hero = () => {
