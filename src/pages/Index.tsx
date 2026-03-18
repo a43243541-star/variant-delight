@@ -19,6 +19,7 @@ const Index = () => (
     <FindMentor />
     <Projects />
     <Gallery />
+    <JoinCTA />
     <Footer />
   </div>
 );
