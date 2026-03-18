@@ -39,9 +39,9 @@ const Mentors = () => {
 <span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">АДВОКАТУРА</span>
               </div>
             </div>
-            <p className="text-sm text-primary-foreground/80 italic">
-              "Помогу выстроить стратегию перехода из in-house в консалтинг."
-            </p>
+            <p className="text-sm text-primary-foreground/80 italic">"Научу строить личный бренд адвоката: стань тем, чье имя уже является защитой."
+
+              </p>
           </div>
 
           {/* Card 2 */}
