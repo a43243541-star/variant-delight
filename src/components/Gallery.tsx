@@ -15,7 +15,7 @@ const photos: { src: string; title: string; subtitle: string; cat: Exclude<Categ
   { src: "/lovable-uploads/b3420278-3f65-446e-9ccb-dea71e642bad.jpg", title: "Лидеры права на ПМЮФ", subtitle: "\n", cat: "Обучения", tall: false },
   { src: "/lovable-uploads/a44958e4-c24f-4103-a79f-09362e78214f.jpg", title: "Награждение Молодежного штаба Ассоциации выпускников \"СЮИ-СГАП-СГЮА\"", subtitle: "\n", cat: "Обучения", tall: true },
   { src: "/lovable-uploads/26d78a20-c191-46eb-84e7-1f1886835840.jpg", title: "Школа молодого юриста - 2025", subtitle: "\n", cat: "Форумы", tall: false },
-  { src: gallery1, title: "Семинар Legal Design", subtitle: "Интерактивный практикум", cat: "Обучения", tall: false },
+  { src: "/lovable-uploads/9000ee03-8549-4083-92e0-4b7ecaf1cd97.jpg", title: "ХХ Съезд Ассоциации выпускников \"СЮИ-СГАП-СГЮА\"", subtitle: "\n", cat: "Обучения", tall: false },
 ];
 
 const filters: Category[] = ["Все", "Обучения", "Форумы", "Неформальное"];
