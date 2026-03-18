@@ -73,18 +73,6 @@ const Projects = () => {
             </div>
           ))}
         </div>
-
-        {/* CTA — анкета */}
-        <div className="text-center mt-14">
-          <a
-            href="https://forms.yandex.ru/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold text-lg px-8 py-4 rounded-pill hover:scale-105 transition-transform"
-          >
-            Заполнить анкету на вступление →
-          </a>
-        </div>
       </div>
     </section>
   );
