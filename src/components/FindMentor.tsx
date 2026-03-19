@@ -134,11 +134,11 @@ const FindMentor = () => {
         </div>
 
         {/* Mentor Cards Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {filtered.map((mentor) =>
           <div
             key={mentor.name}
-            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
+            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col aspect-square">
             
               {/* Avatar Header */}
               <div
