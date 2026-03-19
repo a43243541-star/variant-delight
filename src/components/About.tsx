@@ -53,7 +53,7 @@ const chairpersons = [
 {
   id: "chair-6",
   name: "Каунов Руслан",
-  years: "2026–н.в.",
+  years: "2025–н.в.",
   description: "Действующий председатель. Запустил программу стажировок и карьерного трекинга.",
   initials: "КР",
   img: "/lovable-uploads/chair-kaunov-ruslan.jpg"
