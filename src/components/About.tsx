@@ -1,6 +1,8 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Link } from "react-router-dom";
+import { useRef, useState, useEffect, useCallback } from "react";
+import { Camera } from "lucide-react";
 
 const stats = [
   { value: "100+", label: "Активных резидентов штаба", color: "text-primary" },
@@ -11,51 +13,75 @@ const stats = [
 
 const chairpersons = [
   {
+    id: "chair-1",
     name: "Иванов Алексей Сергеевич",
     years: "2021–2022",
     description: "Основатель штаба. Заложил фундамент организации и провёл первые крупные мероприятия.",
     initials: "\n",
-    image: "",
   },
   {
+    id: "chair-2",
     name: "Петрова Екатерина Дмитриевна",
     years: "2022–2023",
     description: "Расширила сеть партнёров и запустила программу менторства для студентов.",
     initials: "ПЕ",
-    image: "",
   },
   {
+    id: "chair-3",
     name: "Сидоров Максим Андреевич",
     years: "2023–2024",
     description: "Вывел штаб на межвузовский уровень, организовал форум молодых юристов.",
     initials: "СМ",
-    image: "",
   },
   {
+    id: "chair-4",
     name: "Козлова Анна Викторовна",
     years: "2024–2025",
     description: "Развивала цифровое направление и международные связи штаба.",
     initials: "КА",
-    image: "",
   },
   {
+    id: "chair-5",
     name: "Волков Дмитрий Игоревич",
     years: "2025–2026",
     description: "Укрепил взаимодействие с региональными юридическими сообществами.",
     initials: "ВД",
-    image: "",
   },
   {
+    id: "chair-6",
     name: "Новикова Мария Олеговна",
     years: "2026–н.в.",
     description: "Действующий председатель. Запустила программу стажировок и карьерного трекинга.",
     initials: "НМ",
-    image: "",
   },
 ];
 
+const STORAGE_KEY = "chairperson-photos";
+
 const About = () => {
   const { ref, isVisible } = useScrollReveal();
+  const fileInputRefs = useRef<Record<string, HTMLInputElement | null>>({});
+  const [photos, setPhotos] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) setPhotos(JSON.parse(saved));
+    } catch {}
+  }, []);
+
+  const handleUpload = useCallback((id: string, file: File) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = reader.result as string;
+      setPhotos((prev) => {
+        const next = { ...prev, [id]: result };
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+        return next;
+      });
+    };
+    reader.readAsDataURL(file);
+  }, []);
 
   return (
     <section ref={ref} id="about" className={`py-24 lg:py-32 relative overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}>
@@ -120,15 +146,38 @@ const About = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {chairpersons.map((person) => (
               <div
-                key={person.name}
+                key={person.id}
                 className="bg-card rounded-2xl p-6 shadow-card hover:-translate-y-2 hover:shadow-float transition-all text-center group"
               >
-                <Avatar className="w-24 h-24 mx-auto mb-4 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all">
-                  {person.image && <AvatarImage src={person.image} alt={person.name} className="object-cover" />}
-                  <AvatarFallback className="bg-primary/10 text-primary font-display font-bold text-2xl">
-                    {person.initials}
-                  </AvatarFallback>
-                </Avatar>
+                <div className="relative mx-auto w-24 h-24 mb-4">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    ref={(el) => { fileInputRefs.current[person.id] = el; }}
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      if (file) handleUpload(person.id, file);
+                    }}
+                  />
+                  <Avatar
+                    className="w-24 h-24 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all cursor-pointer"
+                    onClick={() => fileInputRefs.current[person.id]?.click()}
+                  >
+                    {photos[person.id] && (
+                      <AvatarImage src={photos[person.id]} alt={person.name} className="object-cover" />
+                    )}
+                    <AvatarFallback className="bg-primary/10 text-primary font-display font-bold text-2xl">
+                      {person.initials}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div
+                    className="absolute bottom-0 right-0 w-7 h-7 bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-md cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity"
+                    onClick={() => fileInputRefs.current[person.id]?.click()}
+                  >
+                    <Camera className="w-3.5 h-3.5" />
+                  </div>
+                </div>
                 <h4 className="font-display font-bold text-lg mb-1">{person.name}</h4>
                 <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full mb-3">
                   {person.years}
