@@ -1,5 +1,6 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Link } from "react-router-dom";
 
 const stats = [
   { value: "100+", label: "Активных резидентов штаба", color: "text-primary" },
@@ -29,27 +30,34 @@ const chairpersons = [
   },
   {
     name: "Козлова Анна Викторовна",
-    years: "2024–н.в.",
-    description: "Действующий председатель. Развивает цифровое направление и международные связи.",
+    years: "2024–2025",
+    description: "Развивала цифровое направление и международные связи штаба.",
     initials: "КА",
+  },
+  {
+    name: "Волков Дмитрий Игоревич",
+    years: "2025–2026",
+    description: "Укрепил взаимодействие с региональными юридическими сообществами.",
+    initials: "ВД",
+  },
+  {
+    name: "Новикова Мария Олеговна",
+    years: "2026–н.в.",
+    description: "Действующий председатель. Запустила программу стажировок и карьерного трекинга.",
+    initials: "НМ",
   },
 ];
 
 const About = () => {
   const { ref, isVisible } = useScrollReveal();
-  const scrollTo = (id: string) => {
-    document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section ref={ref} id="about" className={`py-24 lg:py-32 relative overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}>
-      {/* Background shapes */}
       <div className="bg-shape w-[400px] h-[400px] bg-primary/20 -top-[100px] -right-[100px]" />
       <div className="bg-shape w-[300px] h-[300px] bg-accent/15 bottom-[10%] -left-[50px]" style={{ animationDelay: "-5s" }} />
 
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
-          {/* Left text */}
           <div>
             <p className="font-handwritten text-primary text-2xl mb-2">Кто мы такие?</p>
             <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold tracking-tight mb-6">
@@ -59,15 +67,14 @@ const About = () => {
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Мы — мост между студенчеством и реальной юридической практикой. Наша цель — помочь молодым специалистам найти свой путь, опираясь на поддержку тех, кто уже прошел эту школу и стал лидером отрасли
             </p>
-            <button
-              onClick={() => scrollTo("#history")}
+            <Link
+              to="/mission"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all cursor-pointer border-none"
             >
               Подробнее о миссии
-            </button>
+            </Link>
           </div>
 
-          {/* Right — image + stats */}
           <div>
             <div className="relative rounded-3xl p-3 bg-card shadow-float rotate-2 mb-10">
               <img
@@ -80,7 +87,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* Stats grid */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((s) => (
                 <div
@@ -105,7 +111,7 @@ const About = () => {
             Председатели <span className="text-primary">штаба</span>
           </h3>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {chairpersons.map((person) => (
               <div
                 key={person.name}
