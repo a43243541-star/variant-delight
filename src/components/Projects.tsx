@@ -1,32 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Scale, BookOpen, Users, Megaphone } from "lucide-react";
-
-const projects = [
-  {
-    icon: Scale,
-    title: "Школа молодого юриста",
-    desc: "Интенсивная программа для студентов: мастер-классы от практикующих юристов, разбор реальных кейсов и подготовка к первым шагам в профессии.",
-    accent: "from-primary/20 to-primary/5",
-  },
-  {
-    icon: Megaphone,
-    title: "Диалог на равных",
-    desc: "Серия открытых встреч с представителями судебной системы, прокуратуры и адвокатуры — живой обмен опытом без формальностей.",
-    accent: "from-accent/20 to-accent/5",
-  },
-  {
-    icon: BookOpen,
-    title: "Юридическое проектирование",
-    desc: "Практикум по визуализации правовых документов: учимся делать юридические тексты понятными, современными и убедительными.",
-    accent: "from-primary/20 to-primary/5",
-  },
-  {
-    icon: Users,
-    title: "Менторская программа",
-    desc: "Персональное наставничество от выпускников-лидеров отрасли. Карьерные стратегии, нетворкинг и поддержка на старте.",
-    accent: "from-accent/20 to-accent/5",
-  },
-];
+import { Link } from "react-router-dom";
+import { projectsData } from "@/pages/ProjectPage";
+import { ArrowRight } from "lucide-react";
 
 const Projects = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -38,7 +13,6 @@ const Projects = () => {
       className={`py-24 lg:py-32 scroll-reveal ${isVisible ? "visible" : ""}`}
     >
       <div className="container mx-auto">
-        {/* Header */}
         <div className="text-center mb-14">
           <p className="font-handwritten text-primary text-2xl mb-2">
             Чем мы занимаемся
@@ -48,14 +22,13 @@ const Projects = () => {
           </h2>
         </div>
 
-        {/* Grid */}
         <div className="grid sm:grid-cols-2 gap-6">
-          {projects.map((p) => (
-            <div
-              key={p.title}
-              className="group relative rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+          {projectsData.map((p) => (
+            <Link
+              key={p.id}
+              to={`/projects/${p.id}`}
+              className="group relative rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 no-underline"
             >
-              {/* gradient blob */}
               <div
                 className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${p.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`}
               />
@@ -66,11 +39,14 @@ const Projects = () => {
                 <h3 className="font-display font-bold text-xl mb-3 text-foreground">
                   {p.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  {p.desc}
+                <p className="text-muted-foreground leading-relaxed text-sm mb-4">
+                  {p.shortDesc}
                 </p>
+                <span className="inline-flex items-center gap-1 text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+                  Подробнее <ArrowRight className="w-4 h-4" />
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
