@@ -138,7 +138,7 @@ const About = () => {
 
         {/* Chairpersons section */}
         <div className="mt-24">
-          <p className="font-handwritten text-primary text-2xl mb-2 text-center">Руководство</p>
+          <p className="font-handwritten text-2xl mb-2 text-center text-destructive">Руководство</p>
           <h3 className="text-[clamp(2rem,3vw,3rem)] font-display font-extrabold tracking-tight mb-12 text-center">
             Председатели <span className="text-primary">штаба</span>
           </h3>
