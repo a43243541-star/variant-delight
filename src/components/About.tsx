@@ -14,10 +14,10 @@ const stats = [
 const chairpersons = [
   {
     id: "chair-1",
-    name: "Иванов Алексей Сергеевич",
+    name: "Новиков Богдан",
     years: "2021–2022",
     description: "Основатель штаба. Заложил фундамент организации и провёл первые крупные мероприятия.",
-    initials: "\n",
+    initials: "НБ",
   },
   {
     id: "chair-2",
