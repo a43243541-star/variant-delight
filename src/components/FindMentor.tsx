@@ -60,7 +60,6 @@ const FindMentor = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedMentor, setSelectedMentor] = useState<typeof mentors[0] | null>(null);
-  const [viewingMentor, setViewingMentor] = useState<typeof mentors[0] | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [sending, setSending] = useState(false);
 
@@ -139,8 +138,7 @@ const FindMentor = () => {
           {filtered.map((mentor) =>
           <div
             key={mentor.name}
-            onClick={() => setViewingMentor(mentor)}
-            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col cursor-pointer">
+            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
             
               {/* Photo */}
               <div className="relative w-full aspect-[4/3] overflow-hidden"
@@ -166,7 +164,19 @@ const FindMentor = () => {
                 <span className="inline-block text-[10px] bg-primary/10 text-primary px-2.5 py-0.5 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
                   {mentor.specialty}
                 </span>
-                <p className="text-xs text-muted-foreground mt-1">Нажмите, чтобы узнать подробнее</p>
+                <p className="text-xs mb-1 text-muted-foreground whitespace-pre-line flex-1 line-clamp-3">{mentor.role}</p>
+                
+                <div className="mt-auto">
+                  <p className="text-xs font-display font-bold text-foreground mb-2">Опыт: {mentor.experience}</p>
+                  <p className="text-xs text-foreground/70 italic leading-relaxed mb-4 min-h-[3rem] line-clamp-3">
+                    &ldquo;{mentor.quote}&rdquo;
+                  </p>
+                  <button
+                  onClick={() => setSelectedMentor(mentor)}
+                  className="w-full py-2.5 rounded-pill font-display font-bold text-xs bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer">
+                    Связаться
+                  </button>
+                </div>
               </div>
             </div>
           )}
@@ -192,56 +202,6 @@ const FindMentor = () => {
           </div>
         }
       </div>
-
-      {/* Detail Dialog */}
-      <Dialog open={!!viewingMentor} onOpenChange={(open) => !open && setViewingMentor(null)}>
-        <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="font-display text-xl">{viewingMentor?.name}</DialogTitle>
-            <DialogDescription>
-              {viewingMentor?.specialty?.replace(/\n/g, " ")}
-            </DialogDescription>
-          </DialogHeader>
-          <div className="flex flex-col items-center gap-4 mt-2">
-            <div className="w-full aspect-[3/2] rounded-xl overflow-hidden">
-              <img
-                src={viewingMentor?.img}
-                alt={viewingMentor?.name}
-                className="w-full h-full object-cover object-top" />
-            </div>
-            <div className="w-full space-y-3 text-sm">
-              <div>
-                <p className="font-display font-bold text-foreground mb-1">Должность и регалии</p>
-                <p className="text-muted-foreground leading-relaxed">{viewingMentor?.role}</p>
-              </div>
-              <div>
-                <p className="font-display font-bold text-foreground mb-1">Опыт работы</p>
-                <p className="text-muted-foreground">{viewingMentor?.experience}</p>
-              </div>
-              <div>
-                <p className="font-display font-bold text-foreground mb-1">О себе</p>
-                <p className="text-foreground/70 italic leading-relaxed">
-                  &ldquo;{viewingMentor?.quote}&rdquo;
-                </p>
-              </div>
-              {viewingMentor?.available ? (
-                <button
-                  onClick={() => {
-                    const mentor = viewingMentor;
-                    setViewingMentor(null);
-                    setTimeout(() => setSelectedMentor(mentor), 200);
-                  }}
-                  className="w-full py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer flex items-center justify-center gap-2">
-                  <Send className="w-4 h-4" />
-                  Связаться с наставником
-                </button>
-              ) : (
-                <p className="text-center text-muted-foreground text-xs py-2">Наставник временно недоступен</p>
-              )}
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
 
       {/* Contact Dialog */}
       <Dialog open={!!selectedMentor} onOpenChange={(open) => !open && setSelectedMentor(null)}>
