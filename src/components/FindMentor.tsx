@@ -141,7 +141,7 @@ const FindMentor = () => {
             className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
             
               {/* Photo */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden"
+              <div className="relative w-full aspect-square overflow-hidden"
                 style={{
                   background: "linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--primary)/0.03))"
                 }}>
@@ -164,11 +164,11 @@ const FindMentor = () => {
                 <span className="inline-block text-[10px] bg-primary/10 text-primary px-2.5 py-0.5 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
                   {mentor.specialty}
                 </span>
-                <p className="text-xs mb-1 text-muted-foreground whitespace-pre-line flex-1 line-clamp-3">{mentor.role}</p>
+                <p className="text-xs mb-1 text-muted-foreground whitespace-pre-line flex-1">{mentor.role}</p>
                 
                 <div className="mt-auto">
                   <p className="text-xs font-display font-bold text-foreground mb-2">Опыт: {mentor.experience}</p>
-                  <p className="text-xs text-foreground/70 italic leading-relaxed mb-4 min-h-[3rem] line-clamp-3">
+                  <p className="text-xs text-foreground/70 italic leading-relaxed mb-4">
                     &ldquo;{mentor.quote}&rdquo;
                   </p>
                   <button
@@ -185,12 +185,20 @@ const FindMentor = () => {
           {Array.from({ length: 5 }).map((_, i) =>
             <div
               key={`empty-${i}`}
-              className="bg-card/50 rounded-2xl border border-dashed border-border overflow-hidden flex flex-col items-center justify-center min-h-[320px]">
-              <div className="w-16 h-16 rounded-full bg-muted mb-4 flex items-center justify-center">
-                <GraduationCap className="w-7 h-7 text-muted-foreground/40" />
+              className="bg-card/50 rounded-2xl border border-dashed border-border overflow-hidden flex flex-col">
+              <div className="w-full aspect-square bg-muted/30 flex items-center justify-center">
+                <GraduationCap className="w-12 h-12 text-muted-foreground/20" />
               </div>
-              <p className="font-display font-bold text-sm text-muted-foreground/60">Скоро появится</p>
-              <p className="text-xs text-muted-foreground/40 mt-1">Новый наставник</p>
+              <div className="px-4 py-4 text-center flex flex-col flex-1">
+                <div className="h-4 w-2/3 mx-auto bg-muted/40 rounded mb-2" />
+                <div className="h-3 w-1/2 mx-auto bg-muted/30 rounded-pill mb-3" />
+                <div className="space-y-1.5 flex-1">
+                  <div className="h-2.5 w-full bg-muted/20 rounded" />
+                  <div className="h-2.5 w-5/6 mx-auto bg-muted/20 rounded" />
+                  <div className="h-2.5 w-4/6 mx-auto bg-muted/20 rounded" />
+                </div>
+                <div className="mt-4 h-9 w-full bg-muted/30 rounded-pill" />
+              </div>
             </div>
           )}
         </div>
