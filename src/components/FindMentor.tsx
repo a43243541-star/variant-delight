@@ -185,12 +185,20 @@ const FindMentor = () => {
           {Array.from({ length: 5 }).map((_, i) =>
             <div
               key={`empty-${i}`}
-              className="bg-card/50 rounded-2xl border border-dashed border-border overflow-hidden flex flex-col items-center justify-center min-h-[320px]">
-              <div className="w-16 h-16 rounded-full bg-muted mb-4 flex items-center justify-center">
-                <GraduationCap className="w-7 h-7 text-muted-foreground/40" />
+              className="bg-card/50 rounded-2xl border border-dashed border-border overflow-hidden flex flex-col">
+              <div className="w-full aspect-square bg-muted/30 flex items-center justify-center">
+                <GraduationCap className="w-12 h-12 text-muted-foreground/20" />
               </div>
-              <p className="font-display font-bold text-sm text-muted-foreground/60">Скоро появится</p>
-              <p className="text-xs text-muted-foreground/40 mt-1">Новый наставник</p>
+              <div className="px-4 py-4 text-center flex flex-col flex-1">
+                <div className="h-4 w-2/3 mx-auto bg-muted/40 rounded mb-2" />
+                <div className="h-3 w-1/2 mx-auto bg-muted/30 rounded-pill mb-3" />
+                <div className="space-y-1.5 flex-1">
+                  <div className="h-2.5 w-full bg-muted/20 rounded" />
+                  <div className="h-2.5 w-5/6 mx-auto bg-muted/20 rounded" />
+                  <div className="h-2.5 w-4/6 mx-auto bg-muted/20 rounded" />
+                </div>
+                <div className="mt-4 h-9 w-full bg-muted/30 rounded-pill" />
+              </div>
             </div>
           )}
         </div>
