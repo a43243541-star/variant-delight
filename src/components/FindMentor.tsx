@@ -164,11 +164,11 @@ const FindMentor = () => {
                 <span className="inline-block text-[10px] bg-primary/10 text-primary px-2.5 py-0.5 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
                   {mentor.specialty}
                 </span>
-                <p className="text-xs mb-1 text-muted-foreground whitespace-pre-line flex-1 line-clamp-3">{mentor.role}</p>
+                <p className="text-xs mb-1 text-muted-foreground whitespace-pre-line flex-1">{mentor.role}</p>
                 
                 <div className="mt-auto">
                   <p className="text-xs font-display font-bold text-foreground mb-2">Опыт: {mentor.experience}</p>
-                  <p className="text-xs text-foreground/70 italic leading-relaxed mb-4 min-h-[3rem] line-clamp-3">
+                  <p className="text-xs text-foreground/70 italic leading-relaxed mb-4">
                     &ldquo;{mentor.quote}&rdquo;
                   </p>
                   <button
