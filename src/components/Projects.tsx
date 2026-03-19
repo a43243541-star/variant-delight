@@ -11,7 +11,6 @@ const Projects = () => {
       ref={ref}
       id="projects"
       className={`py-24 lg:py-32 scroll-reveal ${isVisible ? "visible" : ""}`}>
-      
       <div className="container mx-auto">
         <div className="text-center mb-14">
           <p className="font-handwritten text-2xl mb-2 text-destructive">
@@ -27,11 +26,9 @@ const Projects = () => {
           <Link
             key={p.id}
             to={`/projects/${p.id}`}
-            className="group relative rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 no-underline">
-            
+            className="reveal-child group relative rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 no-underline">
               <div
               className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${p.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`} />
-            
               <div className="relative z-10">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                   <p.icon className="w-6 h-6 text-primary" />
@@ -51,7 +48,6 @@ const Projects = () => {
         </div>
       </div>
     </section>);
-
 };
 
 export default Projects;
