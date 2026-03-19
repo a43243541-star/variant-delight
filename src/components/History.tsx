@@ -25,13 +25,18 @@ const History = () => {
     <section ref={revealRef} id="history" className={`py-24 lg:py-32 bg-deep text-deep-foreground relative overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}>
       <div className="container mx-auto text-center">
         <p className="font-handwritten text-2xl mb-2 text-destructive">Наследие</p>
-        <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold text-primary-foreground tracking-tight mb-4">Сила поколений СЮИ-СГАП-СГЮА</h2>
-        <p className="text-lg text-primary-foreground/70 max-w-[700px] mx-auto mb-4">Наша Альма-матер выпустила тысячи выдающихся юристов</p>
+        <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold text-primary-foreground tracking-tight mb-4">Сила поколений СЮИ-СГАП-СГЮА
+
+        </h2>
+        <p className="text-lg text-primary-foreground/70 max-w-[700px] mx-auto mb-4">Наша Альма-матер выпустила тысячи выдающихся юристов
+
+
+        </p>
 
         {/* Comparison slider */}
         <div
           ref={sliderRef}
-          className="reveal-scale relative w-full max-w-[1000px] mx-auto mt-12 aspect-video rounded-3xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] cursor-ew-resize select-none"
+          className="relative w-full max-w-[1000px] mx-auto mt-12 aspect-video rounded-3xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] cursor-ew-resize select-none"
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
@@ -39,18 +44,28 @@ const History = () => {
           onTouchStart={handleMouseDown}
           onTouchEnd={handleMouseUp}
           onTouchMove={handleTouchMove}>
+          
+          {/* New image (full) */}
           <img alt="Современный вуз" className="absolute inset-0 w-full h-full object-cover object-center" src="/lovable-uploads/96c5cee8-080d-4ec4-8270-472f094d2705.jpg" />
+          
+          {/* Old image (clipped) */}
           <div
             className="absolute top-0 left-0 bottom-0 overflow-hidden z-[2]"
             style={{ width: `${sliderPos}%`, borderRight: "4px solid hsl(var(--primary))" }}>
+            
             <img
+
               alt="Исторический вуз"
               className="h-full object-cover object-left-center sepia-[0.6] grayscale-[0.5]"
               style={{ width: sliderRef.current?.offsetWidth || "100vw" }} src="/lovable-uploads/history-old-clean.jpg" />
+            
           </div>
+
+          {/* Slider handle */}
           <div
             className="absolute top-1/2 -translate-y-1/2 z-[3] w-9 h-9 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-sm shadow-lg pointer-events-none"
             style={{ left: `${sliderPos}%`, transform: `translate(-50%, -50%)` }}>
+            
             ↔
           </div>
         </div>
@@ -60,6 +75,7 @@ const History = () => {
         </p>
       </div>
     </section>);
+
 };
 
 export default History;

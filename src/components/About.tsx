@@ -8,6 +8,7 @@ const stats = [
 { value: "10k", label: "Часов полезного нетворкинга", color: "text-primary" },
 { value: "100%", label: "Заряд на успех", color: "text-accent" }];
 
+
 const chairpersons = [
 {
   id: "chair-1",
@@ -58,6 +59,7 @@ const chairpersons = [
   img: "/lovable-uploads/chair-kaunov-ruslan.jpg"
 }];
 
+
 const About = () => {
   const { ref, isVisible } = useScrollReveal();
 
@@ -68,7 +70,7 @@ const About = () => {
 
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
-          <div className="reveal-left">
+          <div>
             <p className="font-handwritten text-2xl mb-2 text-destructive">Кто мы такие?</p>
             <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold tracking-tight mb-6">
               Энергия академии<br />
@@ -80,26 +82,29 @@ const About = () => {
             <Link
               to="/mission"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all cursor-pointer border-none">
+              
               Подробнее о миссии
             </Link>
           </div>
 
-          <div className="reveal-right">
+          <div>
             <div className="relative rounded-3xl p-3 bg-card shadow-float rotate-2 mb-10">
               <img
                 alt="Команда штаба"
                 className="w-full rounded-2xl block h-[300px] object-cover"
                 src="/lovable-uploads/4f4d3394-03b9-40de-98fa-16a2f2ec4cfb.jpg" />
+              
               <div className="absolute -bottom-5 -left-5 bg-deep text-deep-foreground p-5 rounded-full font-display font-extrabold w-[100px] h-[100px] flex items-center justify-center text-center text-xs shadow-[0_10px_20px_rgba(10,25,48,0.3)] -rotate-[10deg] leading-tight">
                 С 2021 года
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {stats.map((s, i) =>
+              {stats.map((s) =>
               <div
                 key={s.label}
-                className="reveal-child bg-card p-5 rounded-2xl shadow-card hover:-translate-y-2 hover:shadow-float transition-all relative overflow-hidden group">
+                className="bg-card p-5 rounded-2xl shadow-card hover:-translate-y-2 hover:shadow-float transition-all relative overflow-hidden group">
+                
                   <div className="absolute top-0 right-0 w-[100px] h-[100px] bg-[radial-gradient(circle,rgba(0,71,255,0.1)_0%,transparent_70%)] translate-x-[30%] -translate-y-[30%] rounded-full" />
                   <p className={`font-display text-4xl lg:text-[3.5rem] font-black leading-none mb-1 ${s.color}`}>
                     {s.value}
@@ -122,7 +127,8 @@ const About = () => {
             {chairpersons.map((person) =>
             <div
               key={person.id}
-              className="reveal-child bg-card rounded-2xl p-6 shadow-card hover:-translate-y-2 hover:shadow-float transition-all text-center group">
+              className="bg-card rounded-2xl p-6 shadow-card hover:-translate-y-2 hover:shadow-float transition-all text-center group">
+              
                 <div className="mx-auto w-24 h-24 mb-4">
                   <Avatar className="w-24 h-24 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all">
                     <AvatarImage src={person.img} alt={person.name} className="object-cover" />
@@ -142,6 +148,7 @@ const About = () => {
         </div>
       </div>
     </section>);
+
 };
 
 export default About;
