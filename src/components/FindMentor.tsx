@@ -138,11 +138,11 @@ const FindMentor = () => {
           {filtered.map((mentor) =>
           <div
             key={mentor.name}
-            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300">
+            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
             
               {/* Avatar Header */}
               <div
-              className="relative h-48 flex items-end justify-center pb-0 overflow-hidden"
+              className="relative h-56 flex items-end justify-center pb-0 overflow-hidden"
               style={{
                 background: "linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--primary)/0.03))"
               }}>
@@ -150,7 +150,7 @@ const FindMentor = () => {
                 <img
                 src={mentor.img}
                 alt={mentor.name}
-                className="w-28 h-28 rounded-full border-4 border-card object-cover shadow-lg translate-y-8 group-hover:scale-105 transition-transform duration-300" />
+                className="w-40 h-40 rounded-full border-4 border-card object-cover shadow-lg translate-y-10 group-hover:scale-105 transition-transform duration-300" />
               
                 {mentor.available &&
               <span className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 rounded-pill bg-primary/10 text-primary text-xs font-bold font-display">
@@ -161,7 +161,7 @@ const FindMentor = () => {
               </div>
 
               {/* Info */}
-              <div className="px-5 pt-10 pb-6 text-center">
+              <div className="px-5 pt-12 pb-6 text-center flex flex-col flex-1">
                 <h3 className="font-display font-bold text-lg text-foreground mb-1">{mentor.name}</h3>
                 <span className="inline-block text-xs bg-primary/10 text-primary px-3 py-1 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
                   {mentor.specialty}
@@ -171,12 +171,14 @@ const FindMentor = () => {
                 <p className="text-sm text-foreground/70 italic leading-relaxed mb-5">
                   &ldquo;{mentor.quote}&rdquo;
                 </p>
-                <button
-                onClick={() => setSelectedMentor(mentor)}
-                className="w-full py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer">
-                
-                  Связаться
-                </button>
+                <div className="mt-auto">
+                  <button
+                  onClick={() => setSelectedMentor(mentor)}
+                  className="w-full py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer">
+                  
+                    Связаться
+                  </button>
+                </div>
               </div>
             </div>
           )}
