@@ -1,5 +1,4 @@
-import mentor1 from "@/assets/mentor1.jpg";
-import mentor2 from "@/assets/mentor2.jpg";
+import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Mentors = () => {
