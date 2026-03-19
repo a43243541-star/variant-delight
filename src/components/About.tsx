@@ -1,12 +1,39 @@
-import associationImg from "@/assets/association.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const stats = [
-{ value: "100+", label: "Активных резидентов штаба", color: "text-primary" },
-{ value: "45", label: "Реализованных проектов", color: "text-accent" },
-{ value: "10k", label: "Часов полезного нетворкинга", color: "text-primary" },
-{ value: "100%", label: "Заряд на успех", color: "text-accent" }];
+  { value: "100+", label: "Активных резидентов штаба", color: "text-primary" },
+  { value: "45", label: "Реализованных проектов", color: "text-accent" },
+  { value: "10k", label: "Часов полезного нетворкинга", color: "text-primary" },
+  { value: "100%", label: "Заряд на успех", color: "text-accent" },
+];
 
+const chairpersons = [
+  {
+    name: "Иванов Алексей Сергеевич",
+    years: "2021–2022",
+    description: "Основатель штаба. Заложил фундамент организации и провёл первые крупные мероприятия.",
+    initials: "ИА",
+  },
+  {
+    name: "Петрова Екатерина Дмитриевна",
+    years: "2022–2023",
+    description: "Расширила сеть партнёров и запустила программу менторства для студентов.",
+    initials: "ПЕ",
+  },
+  {
+    name: "Сидоров Максим Андреевич",
+    years: "2023–2024",
+    description: "Вывел штаб на межвузовский уровень, организовал форум молодых юристов.",
+    initials: "СМ",
+  },
+  {
+    name: "Козлова Анна Викторовна",
+    years: "2024–н.в.",
+    description: "Действующий председатель. Развивает цифровое направление и международные связи.",
+    initials: "КА",
+  },
+];
 
 const About = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -29,52 +56,78 @@ const About = () => {
               Энергия академии<br />
               <span className="text-primary">Опыт выпускников</span>
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">Мы — мост между студенчеством и реальной юридической практикой. Наша цель — помочь молодым специалистам найти свой путь, опираясь на поддержку тех, кто уже прошел эту школу и стал лидером отрасли
-
-
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              Мы — мост между студенчеством и реальной юридической практикой. Наша цель — помочь молодым специалистам найти свой путь, опираясь на поддержку тех, кто уже прошел эту школу и стал лидером отрасли
             </p>
             <button
               onClick={() => scrollTo("#history")}
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all cursor-pointer border-none">
-              
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all cursor-pointer border-none"
+            >
               Подробнее о миссии
             </button>
           </div>
 
           {/* Right — image + stats */}
           <div>
-            {/* Image with rotation */}
             <div className="relative rounded-3xl p-3 bg-card shadow-float rotate-2 mb-10">
               <img
-
                 alt="Команда штаба"
-                className="w-full rounded-2xl block h-[300px] object-cover" src="/lovable-uploads/4f4d3394-03b9-40de-98fa-16a2f2ec4cfb.jpg" />
-              
-              <div className="absolute -bottom-5 -left-5 bg-deep text-deep-foreground p-5 rounded-full font-display font-extrabold w-[100px] h-[100px] flex items-center justify-center text-center text-xs shadow-[0_10px_20px_rgba(10,25,48,0.3)] -rotate-[10deg] leading-tight">С 2021 года
-
+                className="w-full rounded-2xl block h-[300px] object-cover"
+                src="/lovable-uploads/4f4d3394-03b9-40de-98fa-16a2f2ec4cfb.jpg"
+              />
+              <div className="absolute -bottom-5 -left-5 bg-deep text-deep-foreground p-5 rounded-full font-display font-extrabold w-[100px] h-[100px] flex items-center justify-center text-center text-xs shadow-[0_10px_20px_rgba(10,25,48,0.3)] -rotate-[10deg] leading-tight">
+                С 2021 года
               </div>
             </div>
 
             {/* Stats grid */}
             <div className="grid grid-cols-2 gap-4">
-              {stats.map((s) =>
-              <div
-                key={s.label}
-                className="bg-card p-5 rounded-2xl shadow-card hover:-translate-y-2 hover:shadow-float transition-all relative overflow-hidden group">
-                
+              {stats.map((s) => (
+                <div
+                  key={s.label}
+                  className="bg-card p-5 rounded-2xl shadow-card hover:-translate-y-2 hover:shadow-float transition-all relative overflow-hidden group"
+                >
                   <div className="absolute top-0 right-0 w-[100px] h-[100px] bg-[radial-gradient(circle,rgba(0,71,255,0.1)_0%,transparent_70%)] translate-x-[30%] -translate-y-[30%] rounded-full" />
                   <p className={`font-display text-4xl lg:text-[3.5rem] font-black leading-none mb-1 ${s.color}`}>
                     {s.value}
                   </p>
                   <p className="font-semibold text-sm text-deep">{s.label}</p>
                 </div>
-              )}
+              ))}
             </div>
           </div>
         </div>
-      </div>
-    </section>);
 
+        {/* Chairpersons section */}
+        <div className="mt-24">
+          <p className="font-handwritten text-primary text-2xl mb-2 text-center">Руководство</p>
+          <h3 className="text-[clamp(2rem,3vw,3rem)] font-display font-extrabold tracking-tight mb-12 text-center">
+            Председатели <span className="text-primary">штаба</span>
+          </h3>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {chairpersons.map((person) => (
+              <div
+                key={person.name}
+                className="bg-card rounded-2xl p-6 shadow-card hover:-translate-y-2 hover:shadow-float transition-all text-center group"
+              >
+                <Avatar className="w-24 h-24 mx-auto mb-4 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all">
+                  <AvatarFallback className="bg-primary/10 text-primary font-display font-bold text-2xl">
+                    {person.initials}
+                  </AvatarFallback>
+                </Avatar>
+                <h4 className="font-display font-bold text-lg mb-1">{person.name}</h4>
+                <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full mb-3">
+                  {person.years}
+                </span>
+                <p className="text-sm text-muted-foreground leading-relaxed">{person.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;
