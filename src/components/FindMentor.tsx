@@ -138,7 +138,7 @@ const FindMentor = () => {
           {filtered.map((mentor) =>
           <div
             key={mentor.name}
-            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
+            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col aspect-square">
             
               {/* Avatar Header */}
               <div
