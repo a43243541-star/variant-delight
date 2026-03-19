@@ -1,5 +1,4 @@
-import mentor1 from "@/assets/mentor1.jpg";
-import mentor2 from "@/assets/mentor2.jpg";
+import { Link } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Mentors = () => {
@@ -20,9 +19,9 @@ const Mentors = () => {
 
 
             </p>
-          <button className="inline-flex items-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-card text-deep shadow-card hover:-translate-y-1 hover:shadow-float transition-all border-none cursor-pointer">
+          <Link to="/mentors" className="inline-flex items-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-card text-deep shadow-card hover:-translate-y-1 hover:shadow-float transition-all no-underline">
             Смотреть анкеты менторов
-          </button>
+          </Link>
         </div>
 
         {/* Right — stacked mentor cards */}

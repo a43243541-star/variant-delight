@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import EventPage from "./pages/EventPage.tsx";
 import MissionPage from "./pages/MissionPage.tsx";
 import ProjectPage from "./pages/ProjectPage.tsx";
+import MentorsPage from "./pages/MentorsPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/events/:id" element={<EventPage />} />
           <Route path="/mission" element={<MissionPage />} />
           <Route path="/projects/:id" element={<ProjectPage />} />
+          <Route path="/mentors" element={<MentorsPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
