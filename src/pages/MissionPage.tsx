@@ -3,43 +3,43 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const timeline = [
-  {
-    year: "2021",
-    title: "Основание штаба",
-    description:
-      "Группа активных выпускников СГЮА объединилась, чтобы создать площадку для обмена опытом между поколениями юристов. Так появился Штаб выпускников.",
-  },
-  {
-    year: "2022",
-    title: "Первые проекты и менторство",
-    description:
-      "Запущена программа менторства: более 30 практикующих юристов стали наставниками для студентов. Проведены первые мастер-классы и нетворкинг-мероприятия.",
-  },
-  {
-    year: "2023",
-    title: "Межвузовское сотрудничество",
-    description:
-      "Штаб вышел за пределы СГЮА — налажены партнёрства с юридическими факультетами других вузов. Организован первый форум молодых юристов Саратовской области.",
-  },
-  {
-    year: "2024",
-    title: "Цифровая трансформация",
-    description:
-      "Запущена цифровая платформа штаба. Внедрены онлайн-форматы встреч, вебинары с ведущими экспертами отрасли, база знаний для участников.",
-  },
-  {
-    year: "2025",
-    title: "Региональное развитие",
-    description:
-      "Укрепление связей с региональными юридическими сообществами. Запуск совместных проектов с адвокатскими палатами и нотариальными конторами.",
-  },
-  {
-    year: "2026",
-    title: "Новые горизонты",
-    description:
-      "Программа стажировок, карьерный трекинг и международные связи. Штаб продолжает расти и объединять юристов разных поколений.",
-  },
-];
+{
+  year: "2021",
+  title: "Основание штаба",
+  description:
+  "Группа активных выпускников СГЮА объединилась, чтобы создать площадку для обмена опытом между поколениями юристов. Так появился Штаб выпускников."
+},
+{
+  year: "2022",
+  title: "Первые проекты и менторство",
+  description:
+  "Запущена программа менторства: более 30 практикующих юристов стали наставниками для студентов. Проведены первые мастер-классы и нетворкинг-мероприятия."
+},
+{
+  year: "2023",
+  title: "Межвузовское сотрудничество",
+  description:
+  "Штаб вышел за пределы СГЮА — налажены партнёрства с юридическими факультетами других вузов. Организован первый форум молодых юристов Саратовской области."
+},
+{
+  year: "2024",
+  title: "Цифровая трансформация",
+  description:
+  "Запущена цифровая платформа штаба. Внедрены онлайн-форматы встреч, вебинары с ведущими экспертами отрасли, база знаний для участников."
+},
+{
+  year: "2025",
+  title: "Региональное развитие",
+  description:
+  "Укрепление связей с региональными юридическими сообществами. Запуск совместных проектов с адвокатскими палатами и нотариальными конторами."
+},
+{
+  year: "2026",
+  title: "Новые горизонты",
+  description:
+  "Программа стажировок, карьерный трекинг и международные связи. Штаб продолжает расти и объединять юристов разных поколений."
+}];
+
 
 const MissionPage = () => {
   return (
@@ -50,7 +50,7 @@ const MissionPage = () => {
       <section className="pt-32 pb-16 bg-deep text-deep-foreground relative overflow-hidden">
         <div className="bg-shape w-[500px] h-[500px] bg-primary/15 -top-[150px] -right-[150px]" />
         <div className="container mx-auto text-center relative z-10">
-          <p className="font-handwritten text-primary text-2xl mb-2">Наша миссия</p>
+          <p className="font-handwritten text-2xl mb-2 text-primary-foreground">Наша миссия</p>
           <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-display font-extrabold tracking-tight mb-6">
             История <span className="text-primary">Штаба выпускников</span>
           </h1>
@@ -90,8 +90,8 @@ const MissionPage = () => {
             <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-primary/20 hidden sm:block" />
 
             <div className="space-y-10">
-              {timeline.map((item) => (
-                <div key={item.year} className="flex gap-6 items-start">
+              {timeline.map((item) =>
+              <div key={item.year} className="flex gap-6 items-start">
                   <div className="shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground font-display font-bold text-sm flex items-center justify-center shadow-lg relative z-10">
                     {item.year}
                   </div>
@@ -100,7 +100,7 @@ const MissionPage = () => {
                     <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -117,16 +117,16 @@ const MissionPage = () => {
           </p>
           <Link
             to="/#join"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all"
-          >
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all">
+            
             Вступить в штаб
           </Link>
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default MissionPage;
