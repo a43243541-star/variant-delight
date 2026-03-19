@@ -134,34 +134,32 @@ const FindMentor = () => {
         </div>
 
         {/* Mentor Cards Grid */}
-        <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {filtered.map((mentor) =>
           <div
             key={mentor.name}
-            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col aspect-square">
+            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
             
-              {/* Avatar Header */}
-              <div
-              className="relative h-72 flex items-end justify-center pb-0 overflow-hidden"
-              style={{
-                background: "linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--primary)/0.03))"
-              }}>
-              
+              {/* Photo — full-width square */}
+              <div className="relative w-full aspect-square overflow-hidden"
+                style={{
+                  background: "linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--primary)/0.03))"
+                }}>
                 <img
-                src={mentor.img}
-                alt={mentor.name}
-                className="w-56 h-56 rounded-full border-4 border-card object-cover object-top shadow-lg translate-y-12 group-hover:scale-105 transition-transform duration-300" />
+                  src={mentor.img}
+                  alt={mentor.name}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
               
                 {mentor.available &&
-              <span className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 rounded-pill bg-primary/10 text-primary text-xs font-bold font-display">
+                <span className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 rounded-pill bg-primary/10 text-primary text-xs font-bold font-display backdrop-blur-sm">
                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                     Свободен
                   </span>
-              }
+                }
               </div>
 
               {/* Info */}
-              <div className="px-5 pt-14 pb-6 text-center flex flex-col flex-1">
+              <div className="px-5 py-6 text-center flex flex-col flex-1">
                 <h3 className="font-display font-bold text-lg text-foreground mb-1">{mentor.name}</h3>
                 <span className="inline-block text-xs bg-primary/10 text-primary px-3 py-1 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
                   {mentor.specialty}
