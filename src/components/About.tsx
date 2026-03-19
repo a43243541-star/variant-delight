@@ -1,5 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Link } from "react-router-dom";
 
 const stats = [
@@ -15,36 +15,42 @@ const chairpersons = [
     years: "2021–2022",
     description: "Основатель штаба. Заложил фундамент организации и провёл первые крупные мероприятия.",
     initials: "ИА",
+    image: "",
   },
   {
     name: "Петрова Екатерина Дмитриевна",
     years: "2022–2023",
     description: "Расширила сеть партнёров и запустила программу менторства для студентов.",
     initials: "ПЕ",
+    image: "",
   },
   {
     name: "Сидоров Максим Андреевич",
     years: "2023–2024",
     description: "Вывел штаб на межвузовский уровень, организовал форум молодых юристов.",
     initials: "СМ",
+    image: "",
   },
   {
     name: "Козлова Анна Викторовна",
     years: "2024–2025",
     description: "Развивала цифровое направление и международные связи штаба.",
     initials: "КА",
+    image: "",
   },
   {
     name: "Волков Дмитрий Игоревич",
     years: "2025–2026",
     description: "Укрепил взаимодействие с региональными юридическими сообществами.",
     initials: "ВД",
+    image: "",
   },
   {
     name: "Новикова Мария Олеговна",
     years: "2026–н.в.",
     description: "Действующий председатель. Запустила программу стажировок и карьерного трекинга.",
     initials: "НМ",
+    image: "",
   },
 ];
 
@@ -118,6 +124,7 @@ const About = () => {
                 className="bg-card rounded-2xl p-6 shadow-card hover:-translate-y-2 hover:shadow-float transition-all text-center group"
               >
                 <Avatar className="w-24 h-24 mx-auto mb-4 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all">
+                  {person.image && <AvatarImage src={person.image} alt={person.name} className="object-cover" />}
                   <AvatarFallback className="bg-primary/10 text-primary font-display font-bold text-2xl">
                     {person.initials}
                   </AvatarFallback>
