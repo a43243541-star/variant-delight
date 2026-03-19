@@ -60,6 +60,7 @@ const FindMentor = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedMentor, setSelectedMentor] = useState<typeof mentors[0] | null>(null);
+  const [viewingMentor, setViewingMentor] = useState<typeof mentors[0] | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [sending, setSending] = useState(false);
 
