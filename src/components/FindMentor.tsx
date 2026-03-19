@@ -134,7 +134,7 @@ const FindMentor = () => {
         </div>
 
         {/* Mentor Cards Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {filtered.map((mentor) =>
           <div
             key={mentor.name}
