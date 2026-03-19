@@ -139,7 +139,8 @@ const FindMentor = () => {
           {filtered.map((mentor) =>
           <div
             key={mentor.name}
-            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
+            onClick={() => setViewingMentor(mentor)}
+            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col cursor-pointer">
             
               {/* Photo */}
               <div className="relative w-full aspect-[4/3] overflow-hidden"
@@ -165,19 +166,7 @@ const FindMentor = () => {
                 <span className="inline-block text-[10px] bg-primary/10 text-primary px-2.5 py-0.5 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
                   {mentor.specialty}
                 </span>
-                <p className="text-xs mb-1 text-muted-foreground whitespace-pre-line flex-1 line-clamp-3">{mentor.role}</p>
-                
-                <div className="mt-auto">
-                  <p className="text-xs font-display font-bold text-foreground mb-2">Опыт: {mentor.experience}</p>
-                  <p className="text-xs text-foreground/70 italic leading-relaxed mb-4 min-h-[3rem] line-clamp-3">
-                    &ldquo;{mentor.quote}&rdquo;
-                  </p>
-                  <button
-                  onClick={() => setSelectedMentor(mentor)}
-                  className="w-full py-2.5 rounded-pill font-display font-bold text-xs bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer">
-                    Связаться
-                  </button>
-                </div>
+                <p className="text-xs text-muted-foreground mt-1">Нажмите, чтобы узнать подробнее</p>
               </div>
             </div>
           )}
