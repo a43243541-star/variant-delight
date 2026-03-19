@@ -161,21 +161,21 @@ const FindMentor = () => {
               </div>
 
               {/* Info */}
-              <div className="px-5 pt-12 pb-6 text-center flex flex-col flex-1">
+              <div className="px-5 pt-14 pb-6 text-center flex flex-col flex-1">
                 <h3 className="font-display font-bold text-lg text-foreground mb-1">{mentor.name}</h3>
                 <span className="inline-block text-xs bg-primary/10 text-primary px-3 py-1 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
                   {mentor.specialty}
                 </span>
-                <p className="text-sm mb-1 text-muted-foreground whitespace-pre-line">{mentor.role}</p>
-                <p className="text-xs text-muted-foreground/70 mb-4">Опыт: {mentor.experience}</p>
-                <p className="text-sm text-foreground/70 italic leading-relaxed mb-5">
-                  &ldquo;{mentor.quote}&rdquo;
-                </p>
+                <p className="text-sm mb-1 text-muted-foreground whitespace-pre-line flex-1">{mentor.role}</p>
+                
                 <div className="mt-auto">
+                  <p className="text-sm font-display font-bold text-foreground mb-3">Опыт: {mentor.experience}</p>
+                  <p className="text-sm text-foreground/70 italic leading-relaxed mb-5 min-h-[4.5rem]">
+                    &ldquo;{mentor.quote}&rdquo;
+                  </p>
                   <button
                   onClick={() => setSelectedMentor(mentor)}
                   className="w-full py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer">
-                  
                     Связаться
                   </button>
                 </div>
