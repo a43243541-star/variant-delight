@@ -193,6 +193,56 @@ const FindMentor = () => {
         }
       </div>
 
+      {/* Detail Dialog */}
+      <Dialog open={!!viewingMentor} onOpenChange={(open) => !open && setViewingMentor(null)}>
+        <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="font-display text-xl">{viewingMentor?.name}</DialogTitle>
+            <DialogDescription>
+              {viewingMentor?.specialty?.replace(/\n/g, " ")}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex flex-col items-center gap-4 mt-2">
+            <div className="w-full aspect-[3/2] rounded-xl overflow-hidden">
+              <img
+                src={viewingMentor?.img}
+                alt={viewingMentor?.name}
+                className="w-full h-full object-cover object-top" />
+            </div>
+            <div className="w-full space-y-3 text-sm">
+              <div>
+                <p className="font-display font-bold text-foreground mb-1">Должность и регалии</p>
+                <p className="text-muted-foreground leading-relaxed">{viewingMentor?.role}</p>
+              </div>
+              <div>
+                <p className="font-display font-bold text-foreground mb-1">Опыт работы</p>
+                <p className="text-muted-foreground">{viewingMentor?.experience}</p>
+              </div>
+              <div>
+                <p className="font-display font-bold text-foreground mb-1">О себе</p>
+                <p className="text-foreground/70 italic leading-relaxed">
+                  &ldquo;{viewingMentor?.quote}&rdquo;
+                </p>
+              </div>
+              {viewingMentor?.available ? (
+                <button
+                  onClick={() => {
+                    const mentor = viewingMentor;
+                    setViewingMentor(null);
+                    setTimeout(() => setSelectedMentor(mentor), 200);
+                  }}
+                  className="w-full py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer flex items-center justify-center gap-2">
+                  <Send className="w-4 h-4" />
+                  Связаться с наставником
+                </button>
+              ) : (
+                <p className="text-center text-muted-foreground text-xs py-2">Наставник временно недоступен</p>
+              )}
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       {/* Contact Dialog */}
       <Dialog open={!!selectedMentor} onOpenChange={(open) => !open && setSelectedMentor(null)}>
         <DialogContent className="sm:max-w-md">
