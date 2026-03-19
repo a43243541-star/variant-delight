@@ -142,7 +142,7 @@ const FindMentor = () => {
             
               {/* Avatar Header */}
               <div
-              className="relative h-56 flex items-end justify-center pb-0 overflow-hidden"
+              className="relative h-72 flex items-end justify-center pb-0 overflow-hidden"
               style={{
                 background: "linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--primary)/0.03))"
               }}>
@@ -150,7 +150,7 @@ const FindMentor = () => {
                 <img
                 src={mentor.img}
                 alt={mentor.name}
-                className="w-40 h-40 rounded-full border-4 border-card object-cover shadow-lg translate-y-10 group-hover:scale-105 transition-transform duration-300" />
+                className="w-56 h-56 rounded-full border-4 border-card object-cover object-top shadow-lg translate-y-12 group-hover:scale-105 transition-transform duration-300" />
               
                 {mentor.available &&
               <span className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 rounded-pill bg-primary/10 text-primary text-xs font-bold font-display">
