@@ -36,7 +36,7 @@ const chairpersons = [
   {
     id: "chair-4",
     name: "Эбзеев Ислам",
-    years: "2024–2025",
+    years: "2023-2025",
     description: "Развивал цифровое направление и международные связи штаба.",
     initials: "ЭИ",
   },
