@@ -93,9 +93,9 @@ const FindMentor = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="font-handwritten text-primary text-2xl mb-2">Персональный подход</p>
+          <p className="font-handwritten text-primary text-2xl mb-2">Закрытый клуб</p>
           <h2 className="text-[clamp(2rem,3.5vw,3.5rem)] font-display font-extrabold tracking-tight mb-4">
-            Найти наставника
+            Найди наставника
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Выбери ментора по направлению и получи персональные консультации от лучших выпускников СГЮА
