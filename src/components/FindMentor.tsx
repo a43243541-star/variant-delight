@@ -231,26 +231,6 @@ const FindMentor = () => {
             </div>
           )}
 
-          {/* Empty placeholder cards */}
-          {Array.from({ length: 5 }).map((_, i) =>
-            <div
-              key={`empty-${i}`}
-              className="bg-card/50 rounded-2xl border border-dashed border-border overflow-hidden flex flex-col">
-              <div className="w-full aspect-square bg-muted/30 flex items-center justify-center">
-                <GraduationCap className="w-12 h-12 text-muted-foreground/20" />
-              </div>
-              <div className="px-4 py-4 text-center flex flex-col flex-1">
-                <div className="h-4 w-2/3 mx-auto bg-muted/40 rounded mb-2" />
-                <div className="h-3 w-1/2 mx-auto bg-muted/30 rounded-pill mb-3" />
-                <div className="space-y-1.5 flex-1">
-                  <div className="h-2.5 w-full bg-muted/20 rounded" />
-                  <div className="h-2.5 w-5/6 mx-auto bg-muted/20 rounded" />
-                  <div className="h-2.5 w-4/6 mx-auto bg-muted/20 rounded" />
-                </div>
-                <div className="mt-4 h-9 w-full bg-muted/30 rounded-pill" />
-              </div>
-            </div>
-          )}
         </div>
 
         {filtered.length === 0 &&
