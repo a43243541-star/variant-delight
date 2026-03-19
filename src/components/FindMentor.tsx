@@ -134,14 +134,14 @@ const FindMentor = () => {
         </div>
 
         {/* Mentor Cards Grid */}
-        <div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
           {filtered.map((mentor) =>
           <div
             key={mentor.name}
             className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
             
-              {/* Photo — full-width square */}
-              <div className="relative w-full aspect-square overflow-hidden"
+              {/* Photo */}
+              <div className="relative w-full aspect-[4/3] overflow-hidden"
                 style={{
                   background: "linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--primary)/0.03))"
                 }}>
@@ -151,33 +151,46 @@ const FindMentor = () => {
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
               
                 {mentor.available &&
-                <span className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 rounded-pill bg-primary/10 text-primary text-xs font-bold font-display backdrop-blur-sm">
-                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <span className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-0.5 rounded-pill bg-primary/10 text-primary text-[10px] font-bold font-display backdrop-blur-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                     Свободен
                   </span>
                 }
               </div>
 
               {/* Info */}
-              <div className="px-5 py-6 text-center flex flex-col flex-1">
-                <h3 className="font-display font-bold text-lg text-foreground mb-1">{mentor.name}</h3>
-                <span className="inline-block text-xs bg-primary/10 text-primary px-3 py-1 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
+              <div className="px-4 py-4 text-center flex flex-col flex-1">
+                <h3 className="font-display font-bold text-base text-foreground mb-1">{mentor.name}</h3>
+                <span className="inline-block text-[10px] bg-primary/10 text-primary px-2.5 py-0.5 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
                   {mentor.specialty}
                 </span>
-                <p className="text-sm mb-1 text-muted-foreground whitespace-pre-line flex-1">{mentor.role}</p>
+                <p className="text-xs mb-1 text-muted-foreground whitespace-pre-line flex-1 line-clamp-3">{mentor.role}</p>
                 
                 <div className="mt-auto">
-                  <p className="text-sm font-display font-bold text-foreground mb-3">Опыт: {mentor.experience}</p>
-                  <p className="text-sm text-foreground/70 italic leading-relaxed mb-5 min-h-[4.5rem]">
+                  <p className="text-xs font-display font-bold text-foreground mb-2">Опыт: {mentor.experience}</p>
+                  <p className="text-xs text-foreground/70 italic leading-relaxed mb-4 min-h-[3rem] line-clamp-3">
                     &ldquo;{mentor.quote}&rdquo;
                   </p>
                   <button
                   onClick={() => setSelectedMentor(mentor)}
-                  className="w-full py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer">
+                  className="w-full py-2.5 rounded-pill font-display font-bold text-xs bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all border-none cursor-pointer">
                     Связаться
                   </button>
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* Empty placeholder cards */}
+          {Array.from({ length: 5 }).map((_, i) =>
+            <div
+              key={`empty-${i}`}
+              className="bg-card/50 rounded-2xl border border-dashed border-border overflow-hidden flex flex-col items-center justify-center min-h-[320px]">
+              <div className="w-16 h-16 rounded-full bg-muted mb-4 flex items-center justify-center">
+                <GraduationCap className="w-7 h-7 text-muted-foreground/40" />
+              </div>
+              <p className="font-display font-bold text-sm text-muted-foreground/60">Скоро появится</p>
+              <p className="text-xs text-muted-foreground/40 mt-1">Новый наставник</p>
             </div>
           )}
         </div>
