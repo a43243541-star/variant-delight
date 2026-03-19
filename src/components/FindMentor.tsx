@@ -141,7 +141,7 @@ const FindMentor = () => {
             className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
             
               {/* Photo */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden"
+              <div className="relative w-full aspect-square overflow-hidden"
                 style={{
                   background: "linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--primary)/0.03))"
                 }}>
