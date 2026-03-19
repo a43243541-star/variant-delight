@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
 { label: "О штабе", href: "#about" },
 { label: "Об Ассоциации", href: "#history" },
 
-{ label: "Наставники", href: "#find-mentor" },
+{ label: "Наставники", href: "/mentors" },
 { label: "Проекты", href: "#projects" },
 { label: "События", href: "#gallery" }];
 
@@ -13,6 +14,7 @@ const navLinks = [
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -22,7 +24,11 @@ const Header = () => {
 
   const handleNav = (href: string) => {
     setMenuOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    if (href.startsWith("/")) {
+      navigate(href);
+    } else {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
