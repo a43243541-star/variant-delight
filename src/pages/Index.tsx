@@ -35,6 +35,7 @@ const Index = () => {
     <JoinCTA />
     <Footer />
   </div>
-);
+  );
+};
 
 export default Index;
