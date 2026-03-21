@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -15,6 +15,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -26,6 +27,9 @@ const Header = () => {
     setMenuOpen(false);
     if (href.startsWith("/")) {
       navigate(href);
+    } else if (location.pathname !== "/") {
+      // Navigate to home page first, then scroll to section
+      navigate("/" + href);
     } else {
       document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
     }
