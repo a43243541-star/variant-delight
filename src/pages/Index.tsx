@@ -4,6 +4,7 @@ import About from "@/components/About";
 import History from "@/components/History";
 import Projects from "@/components/Projects";
 import Mentors from "@/components/Mentors";
+import BecomeMentor from "@/components/BecomeMentor";
 import Gallery from "@/components/Gallery";
 import JoinCTA from "@/components/JoinCTA";
 import Footer from "@/components/Footer";
