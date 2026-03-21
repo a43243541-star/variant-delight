@@ -1,7 +1,6 @@
 import { useRef, useState, useCallback } from "react";
 import historyOld from "@/assets/history-old.jpg";
 import historyNew from "@/assets/history-new.jpg";
-import sguaModern from "@/assets/sgua-modern.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const History = () => {
@@ -47,7 +46,7 @@ const History = () => {
           onTouchMove={handleTouchMove}>
           
           {/* New image (full) */}
-          <img alt="Современный вуз СГЮА" className="absolute inset-0 w-full h-full object-cover object-center" src={sguaModern} />
+          <img alt="Современный вуз" className="absolute inset-0 w-full h-full object-cover object-center" src="/lovable-uploads/96c5cee8-080d-4ec4-8270-472f094d2705.jpg" />
           
           {/* Old image (clipped) */}
           <div
