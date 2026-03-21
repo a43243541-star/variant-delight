@@ -9,6 +9,7 @@ import MissionPage from "./pages/MissionPage.tsx";
 import ProjectPage from "./pages/ProjectPage.tsx";
 import MentorsPage from "./pages/MentorsPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/events/:id" element={<EventPage />} />
