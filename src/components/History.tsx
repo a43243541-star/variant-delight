@@ -1,6 +1,7 @@
 import { useRef, useState, useCallback } from "react";
 import historyOld from "@/assets/history-old.jpg";
 import historyNew from "@/assets/history-new.jpg";
+import sguaModern from "@/assets/sgua-modern.jpg";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const History = () => {
