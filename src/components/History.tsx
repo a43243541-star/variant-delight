@@ -47,7 +47,7 @@ const History = () => {
           onTouchMove={handleTouchMove}>
           
           {/* New image (full) */}
-          <img alt="Современный вуз" className="absolute inset-0 w-full h-full object-cover object-center" src="/lovable-uploads/96c5cee8-080d-4ec4-8270-472f094d2705.jpg" />
+          <img alt="Современный вуз СГЮА" className="absolute inset-0 w-full h-full object-cover object-center" src={sguaModern} />
           
           {/* Old image (clipped) */}
           <div
