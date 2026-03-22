@@ -191,17 +191,18 @@ const FindMentor = () => {
             className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
             
               {/* Photo */}
-              <div className="relative w-full aspect-square overflow-hidden"
-                style={{
-                  background: "linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--primary)/0.03))"
-                }}>
-                <img
-                  src={mentor.img}
-                  alt={mentor.name}
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
-              
+              <div className="relative w-full flex justify-center pt-6 pb-2">
+                <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--primary)/0.03))"
+                  }}>
+                  <img
+                    src={mentor.img}
+                    alt={mentor.name}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
+                </div>
                 {mentor.available &&
-                <span className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-0.5 rounded-pill bg-primary/10 text-primary text-[10px] font-bold font-display backdrop-blur-sm">
+                <span className="absolute top-4 right-4 flex items-center gap-1.5 px-2.5 py-0.5 rounded-pill bg-primary/10 text-primary text-[10px] font-bold font-display backdrop-blur-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                     Свободен
                   </span>
