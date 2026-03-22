@@ -57,7 +57,7 @@ const mentors = [
 },
 {
   name: "Смирнова Елена",
-  img: "/lovable-uploads/smirnova-elena.png",
+  img: "/placeholder.svg",
   specialty: "Корпоративное право",
   category: "civil",
   role: "Партнёр юридической фирмы, специалист по M&A и корпоративным спорам, выпускник 2001 года",
