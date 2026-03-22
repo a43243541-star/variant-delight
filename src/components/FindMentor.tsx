@@ -7,7 +7,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const mentors = [
 {
   name: "Александр Козлов",
-  img: "/lovable-uploads/kozlov-photo.png",
+  img: "/lovable-uploads/a41f8955-1784-4f36-b6a3-3daa2e4aaf1c.jpg",
   specialty: "Прокурорский надзор",
   category: "prosecution",
   role: "Председатель Правления Ассоциации выпускников \"СЮИ-СГАП-СГЮА\", государственный советник юстиции 2 класса, Почетный работник прокуратуры Российской Федерации, кандидат юридических наук, выпускник 1991 года",
