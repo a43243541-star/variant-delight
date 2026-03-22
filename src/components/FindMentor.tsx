@@ -47,7 +47,7 @@ const mentors = [
 },
 {
   name: "Петров Дмитрий",
-  img: "/placeholder.svg",
+  img: "/lovable-uploads/petrov-dmitriy.png",
   specialty: "Уголовное право",
   category: "criminal",
   role: "Следователь по особо важным делам, советник юстиции, кандидат юридических наук, выпускник 2003 года",
