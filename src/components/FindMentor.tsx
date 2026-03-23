@@ -199,7 +199,7 @@ const FindMentor = () => {
                   <img
                     src={mentor.img}
                     alt={mentor.name}
-                    className={`w-full h-full object-cover ${mentor.imgPosition || 'object-top'} group-hover:scale-105 transition-transform duration-300`} />
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 {mentor.available &&
                 <span className="absolute top-4 right-4 flex items-center gap-1.5 px-2.5 py-0.5 rounded-pill bg-primary/10 text-primary text-[10px] font-bold font-display backdrop-blur-sm">
