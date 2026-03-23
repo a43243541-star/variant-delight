@@ -68,13 +68,13 @@ const mentors = [
   available: true
 },
 {
-  name: "Ибрагимов Тимур",
-  img: "/placeholder.svg",
-  specialty: "Налоговое право",
-  category: "arbitration",
-  role: "Руководитель налоговой практики, арбитражный представитель, кандидат экономических наук, выпускник 1999 года",
-  experience: "27 лет",
-  quote: "Покажу как выигрывать налоговые споры и выстраивать защиту бизнеса.",
+  name: "Новикова Анна",
+  img: "/lovable-uploads/KdZJcSGTpzQDBGTJMVRiQBt22hu1NAcOjijK73xL_z-_kwa9nxzdQaMrl4_GRs1W5Q4g5TtwxQ2KmeQ_fFENPVs5.png",
+  specialty: "Конституционное право",
+  category: "prosecution",
+  role: "Координатор Молодежного штаба Ассоциации выпускников \"СЮИ-СГАП-СГЮА\", преподаватель СГЮА, лектор Российского общества \"Знание\", выпускник 2022 года",
+  experience: "4 года",
+  quote: "Помогу уверенно ориентироваться в конституционных основах и правоприменении.",
   available: true
 },
 {
