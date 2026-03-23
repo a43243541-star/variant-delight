@@ -129,7 +129,7 @@ const Hero = () => {
         <h1 className="text-primary-foreground text-[clamp(2.2rem,6vw,6rem)] font-display font-black tracking-tight leading-[1.05] my-4 opacity-0 animate-fade-up-d1">
           Будущее права
           <br />
-          начинается здесь
+          начинается тут
         </h1>
         <p className="text-base md:text-xl text-primary-foreground/80 mb-10 max-w-[600px] opacity-0 animate-fade-up-d2">
           Молодежный штаб Ассоциации выпускников СЮИ-СГАП-СГЮА. Объединяем
