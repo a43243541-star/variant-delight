@@ -127,7 +127,7 @@ const Hero = () => {
           Твой старт в карьеру
         </p>
         <h1 className="text-primary-foreground text-[clamp(2.2rem,6vw,6rem)] font-display font-black tracking-tight leading-[1.05] my-4 opacity-0 animate-fade-up-d1">
-          Настоящие права
+          Будущие права
           <br />
           начинается здесь
         </h1>
