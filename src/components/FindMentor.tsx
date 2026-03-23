@@ -13,8 +13,7 @@ const mentors = [
   role: "Председатель Правления Ассоциации выпускников \"СЮИ-СГАП-СГЮА\", государственный советник юстиции 2 класса, Почетный работник прокуратуры Российской Федерации, кандидат юридических наук, выпускник 1991 года",
   experience: "35 лет",
   quote: "Научу ответственности за результат: прокурорская школа принятия решения.",
-  available: true,
-  imgPosition: "object-[50%_25%]"
+  available: true
 },
 {
   name: "Артин Василий",
@@ -54,8 +53,7 @@ const mentors = [
   role: "Следователь по особо важным делам, советник юстиции, кандидат юридических наук, выпускник 2003 года",
   experience: "22 года",
   quote: "Помогу разобраться в тонкостях уголовного процесса и следственной практики.",
-  available: true,
-  imgPosition: "object-[50%_20%]"
+  available: true
 },
 {
   name: "Смирнова Елена",
@@ -201,7 +199,7 @@ const FindMentor = () => {
                   <img
                     src={mentor.img}
                     alt={mentor.name}
-                    className={`w-full h-full object-cover ${mentor.imgPosition || 'object-top'} group-hover:scale-105 transition-transform duration-300`} />
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 {mentor.available &&
                 <span className="absolute top-4 right-4 flex items-center gap-1.5 px-2.5 py-0.5 rounded-pill bg-primary/10 text-primary text-[10px] font-bold font-display backdrop-blur-sm">
