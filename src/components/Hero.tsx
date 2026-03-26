@@ -146,7 +146,7 @@ const Hero = () => {
             onClick={() => scrollTo("#gallery")}
             className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-pill font-display font-bold text-base sm:text-lg bg-card text-deep shadow-card hover:-translate-y-1 hover:text-primary hover:shadow-float transition-all duration-300 ease-out cursor-pointer border-none"
           >
-            Ближайшие события
+            События
           </button>
         </div>
       </div>
