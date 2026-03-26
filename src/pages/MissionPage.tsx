@@ -52,7 +52,7 @@ const MissionPage = () => {
         <div className="container mx-auto text-center relative z-10">
           <p className="font-handwritten text-2xl mb-2 text-primary-foreground">Наша миссия</p>
           <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-display font-extrabold tracking-tight mb-6">
-            История <span className="text-primary">Молодежного штаба Ассоциации выпускников</span>
+            <span className="text-primary">Молодежного штаба Ассоциации выпускников</span>
           </h1>
           <p className="text-lg text-primary-foreground/70 max-w-[700px] mx-auto">
             Мы строим мост между поколениями юристов — от первых шагов в профессии
