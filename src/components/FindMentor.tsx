@@ -57,7 +57,7 @@ const mentors = [
 },
 {
   name: "Корума Кира",
-  img: "/lovable-uploads/88792c33-6cb4-48ad-9094-b5a0d92a28f0.jpg",
+  img: "/lovable-uploads/04a87a174e223c0acb3d11405a4ea14a_440_440_80-Photoroom.png",
   specialty: "АДВОКАТУРА\n",
   category: "civil",
   role: "Член Правления Ассоциации выпускников \"СЮИ-СГАП-СГЮА\", адвокат Адвокатской палаты г. Москва, выпускник 1990 года",
