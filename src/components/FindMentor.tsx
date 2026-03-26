@@ -47,7 +47,7 @@ const mentors = [
 },
 {
   name: "Несудимов Алексей",
-  img: "/lovable-uploads/i-2-Photoroom.png",
+  img: "/lovable-uploads/i-2-Photoroom.jpeg",
   specialty: "Адвокатура",
   category: "civil",
   role: "Член Правления и руководитель регионального отделения Ассоциации выпускников \"СЮИ-СГАП-СГЮА\", Почетный адвокат России, выпускник 1993 года",
