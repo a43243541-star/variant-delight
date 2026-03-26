@@ -16,7 +16,7 @@ const mentors = [
   available: true
 },
 {
-  name: "Артин Василий",
+  name: "Василий Артин",
   img: "/lovable-uploads/928f8173-c80f-49fe-9679-269667029d4f.png",
   specialty: "НЕСОСТОЯТЕЛЬНОСТЬ\nИ БАНКРОТСТВО",
   category: "criminal",
@@ -26,7 +26,7 @@ const mentors = [
   available: true
 },
 {
-  name: "Гугнюк Иван",
+  name: "Иван Гугнюк",
   img: "/lovable-uploads/gygnuk2020-Photoroom.png",
   specialty: "Образование и молодежная политика",
   category: "civil",
@@ -36,7 +36,7 @@ const mentors = [
   available: true
 },
 {
-  name: "Артюхов Эдуард",
+  name: "Эдуард Артюхов",
   img: "/lovable-uploads/artyukhov-photoroom.png",
   specialty: "Прокурорский надзор",
   category: "prosecution",
@@ -46,7 +46,7 @@ const mentors = [
   available: true
 },
 {
-  name: "Несудимов Алексей",
+  name: "Алексей Несудимов",
   img: "/lovable-uploads/i-2-Photoroom.jpeg",
   specialty: "Адвокатура",
   category: "civil",
@@ -58,7 +58,7 @@ const mentors = [
   available: true
 },
 {
-  name: "Корума Кира",
+  name: "Кира Корума",
   img: "/lovable-uploads/04a87a174e223c0acb3d11405a4ea14a_440_440_80-Photoroom.png",
   specialty: "АДВОКАТУРА\n",
   category: "civil",
@@ -68,7 +68,7 @@ const mentors = [
   available: true
 },
 {
-  name: "Новиков Богдан",
+  name: "Богдан Новиков",
   img: "/lovable-uploads/20220624-DSN07690-3.jpeg",
   specialty: "Финансовое право",
   category: "civil",
@@ -80,7 +80,7 @@ const mentors = [
   available: true
 },
 {
-  name: "Волкова Татьяна",
+  name: "Татьяна Волкова",
   img: "/lovable-uploads/jDMFaniit4WH6gC052TQwUvNB6rNkRZbQoLKoSbmEGCKFFtq9Gz80xt5ac7Dq5kp79kNQ-ovY_5YziApBX7CgfMk-Photoroom.png",
   specialty: "Арбитражный процесс",
   category: "arbitration",
@@ -90,7 +90,7 @@ const mentors = [
   available: true
 },
 {
-  name: "Новикова Анна",
+  name: "Анна Новикова",
   img: "/lovable-uploads/KdZJcSGTpzQDBGTJMVRiQBt22hu1NAcOjijK73xL_z-_kwa9nxzdQaMrl4_GRs1W5Q4g5TtwxQ2KmeQ_fFENPVs5-Photoroom.png",
   specialty: "Конституционное право",
   category: "civil",
