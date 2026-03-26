@@ -89,7 +89,7 @@ const mentors = [
 },
 {
   name: "Новикова Анна",
-  img: "/lovable-uploads/KdZJcSGTpzQDBGTJMVRiQBt22hu1NAcOjijK73xL_z-_kwa9nxzdQaMrl4_GRs1W5Q4g5TtwxQ2KmeQ_fFENPVs5.png",
+  img: "/lovable-uploads/KdZJcSGTpzQDBGTJMVRiQBt22hu1NAcOjijK73xL_z-_kwa9nxzdQaMrl4_GRs1W5Q4g5TtwxQ2KmeQ_fFENPVs5-Photoroom.png",
   specialty: "Конституционное право",
   category: "prosecution",
   role: "Координатор Молодежного штаба Ассоциации выпускников \"СЮИ-СГАП-СГЮА\", преподаватель СГЮА, лектор Российского общества \"Знание\", выпускник 2022 года",
