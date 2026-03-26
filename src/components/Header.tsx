@@ -55,7 +55,7 @@ const Header = () => {
           <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
             <img alt="Штаб СГЮА" className="w-8 h-8 object-contain" src="/lovable-uploads/cc2bdb7b-64cb-41a5-8f15-37697f9aa18c.jpg" />
           </div>
-          Штаб СГЮА
+          Молодежный штаб АВ
         </a>
 
         {/* Desktop nav */}
