@@ -79,7 +79,7 @@ const mentors = [
 },
 {
   name: "Волкова Татьяна",
-  img: "/lovable-uploads/f436f8ae-edcf-4b77-8b3d-a681038ee1fa.jpg",
+  img: "/lovable-uploads/jDMFaniit4WH6gC052TQwUvNB6rNkRZbQoLKoSbmEGCKFFtq9Gz80xt5ac7Dq5kp79kNQ-ovY_5YziApBX7CgfMk-Photoroom.png",
   specialty: "Арбитражный процесс",
   category: "arbitration",
   role: "Зам. председателя Арбитражного суда, доктор юридических наук, профессор, победитель просветительского конкурса \"Лига Лекторов\", выпускник 1997 года",
