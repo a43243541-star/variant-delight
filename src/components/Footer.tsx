@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { toast } from "sonner";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -14,8 +15,15 @@ const Footer = () => {
     }
   };
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const scrollTo = (id: string) => {
-    document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/" + id);
+    } else {
+      document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
