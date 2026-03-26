@@ -52,7 +52,7 @@ const MissionPage = () => {
         <div className="container mx-auto text-center relative z-10">
           <p className="font-handwritten text-2xl mb-2 text-primary-foreground">Наша миссия</p>
           <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-display font-extrabold tracking-tight mb-6">
-            История <span className="text-primary">Молодежного штаба Ассоциации выпускников</span>
+            История <span className="text-primary">Штаба выпускников</span>
           </h1>
           <p className="text-lg text-primary-foreground/70 max-w-[700px] mx-auto">
             Мы строим мост между поколениями юристов — от первых шагов в профессии
@@ -63,7 +63,7 @@ const MissionPage = () => {
 
       {/* Mission */}
       <section className="py-20">
-        <div className="container mx-auto max-w-[800px] text-center">
+        <div className="container mx-auto max-w-[800px]">
           <h2 className="text-3xl font-display font-extrabold mb-6">Зачем мы здесь</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-4">
             Штаб выпускников СГЮА — это сообщество, объединяющее тех, кто прошёл школу одного
