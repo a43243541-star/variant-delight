@@ -56,7 +56,7 @@ const BecomeMentor = () => {
 
         <div className="text-center">
           <a
-            href="https://t.me/shtab_sgua"
+            href="https://forms.gle/8p7FmcdwQXtihEsWA"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-base bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-1 transition-all no-underline"
