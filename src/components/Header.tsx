@@ -72,12 +72,14 @@ const Header = () => {
           )}
         </ul>
 
-        <button
-          onClick={() => handleNav("#footer")}
-          className="hidden md:inline-flex items-center justify-center gap-2 px-6 py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all cursor-pointer border-none">
+        <a
+          href="https://forms.gle/yFpGBYVXjrSgto7o8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-flex items-center justify-center gap-2 px-6 py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground hover:shadow-float hover:-translate-y-0.5 transition-all no-underline">
           
           Вступить в штаб
-        </button>
+        </a>
 
         {/* Mobile toggle */}
         <button
@@ -104,12 +106,14 @@ const Header = () => {
               </li>
           )}
             <li>
-              <button
-              onClick={() => handleNav("#footer")}
-              className="w-full px-6 py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground border-none cursor-pointer">
+              <a
+              href="https://forms.gle/yFpGBYVXjrSgto7o8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full px-6 py-3 rounded-pill font-display font-bold text-sm bg-primary text-primary-foreground no-underline text-center">
               
                 Вступить в штаб
-              </button>
+              </a>
             </li>
           </ul>
         </div>

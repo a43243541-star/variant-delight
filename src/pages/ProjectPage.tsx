@@ -208,12 +208,14 @@ const ProjectPage = () => {
           <p className="text-muted-foreground mb-6">
             Присоединяйся к проекту и начни свой путь к профессиональному росту.
           </p>
-          <Link
-            to="/#join"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-pill font-display font-bold text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all"
+          <a
+            href="https://forms.gle/yFpGBYVXjrSgto7o8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-pill font-display font-bold text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all no-underline"
           >
             Вступить в штаб
-          </Link>
+          </a>
         </div>
       </section>
 
