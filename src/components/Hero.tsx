@@ -136,12 +136,14 @@ const Hero = () => {
           поколения, делимся опытом, создаем элиту юриспруденции вместе
         </p>
         <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up-d3">
-          <button
-            onClick={() => scrollTo("#footer")}
-            className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-pill font-display font-bold text-base sm:text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all duration-300 ease-out cursor-pointer border-none relative overflow-hidden z-[1]"
+          <a
+            href="https://forms.gle/yFpGBYVXjrSgto7o8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-pill font-display font-bold text-base sm:text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all duration-300 ease-out no-underline relative overflow-hidden z-[1]"
           >
             Присоединиться к команде
-          </button>
+          </a>
           <button
             onClick={() => scrollTo("#gallery")}
             className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-pill font-display font-bold text-base sm:text-lg bg-card text-deep shadow-card hover:-translate-y-1 hover:text-primary hover:shadow-float transition-all duration-300 ease-out cursor-pointer border-none"
