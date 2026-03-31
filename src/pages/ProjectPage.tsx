@@ -168,7 +168,7 @@ const ProjectPage = () => {
               {leadersImages.map((src) => (
                 <img
                   key={`left-${src}`}
-                  src={src}
+                  src={encodeURI(src)}
                   alt="Лидеры права"
                   className="w-40 h-56 object-cover rounded-xl shadow-sm"
                 />
@@ -178,7 +178,7 @@ const ProjectPage = () => {
               {leadersImages.map((src) => (
                 <img
                   key={`right-${src}`}
-                  src={src}
+                  src={encodeURI(src)}
                   alt="Лидеры права"
                   className="w-40 h-56 object-cover rounded-xl shadow-sm"
                 />
