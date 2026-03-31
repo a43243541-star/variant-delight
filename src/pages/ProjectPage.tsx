@@ -102,6 +102,19 @@ export const projectsData = [
 const ProjectPage = () => {
   const { id } = useParams();
   const project = projectsData.find((p) => p.id === id);
+  const isLeaders = id === "design";
+  const leadersImages = [
+    "/lovable-uploads/Лидеры%20права%20жюри.jpg",
+    "/lovable-uploads/лидер%203.jpg",
+    "/lovable-uploads/лидер.jpg",
+    "/lovable-uploads/лидеры%2000.jpg",
+    "/lovable-uploads/лидеры%2022.jpg",
+    "/lovable-uploads/лидеры%2033.jpg",
+    "/lovable-uploads/лидеры%2099.jpg",
+    "/lovable-uploads/лидеры%20права%201.jpg",
+    "/lovable-uploads/лидерыыы.jpg",
+    "/lovable-uploads/лидерыыы34.jpg",
+  ];
 
   if (!project) {
     return (
@@ -148,8 +161,32 @@ const ProjectPage = () => {
       </section>
 
       {/* Content */}
-      <section className="py-20">
-        <div className="container mx-auto max-w-[900px]">
+      <section className="py-20 relative overflow-hidden">
+        {isLeaders && (
+          <>
+            <div className="hidden xl:flex flex-col gap-4 absolute left-6 top-20">
+              {leadersImages.map((src) => (
+                <img
+                  key={`left-${src}`}
+                  src={src}
+                  alt="Лидеры права"
+                  className="w-40 h-56 object-cover rounded-xl shadow-sm"
+                />
+              ))}
+            </div>
+            <div className="hidden xl:flex flex-col gap-4 absolute right-6 top-20">
+              {leadersImages.map((src) => (
+                <img
+                  key={`right-${src}`}
+                  src={src}
+                  alt="Лидеры права"
+                  className="w-40 h-56 object-cover rounded-xl shadow-sm"
+                />
+              ))}
+            </div>
+          </>
+        )}
+        <div className="container mx-auto max-w-[900px] relative z-10">
           <div className="grid md:grid-cols-[1fr_300px] gap-12">
             {/* Main text */}
             <div>
