@@ -11,14 +11,11 @@ const Mentors = () => {
           
         {/* Left text */}
         <div>
-          <p className="font-handwritten text-2xl mb-2 text-primary-foreground">Закрытый клуб</p>
+          <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] mb-2">НЕТВОРКИНГ</p>
           <h2 className="text-[clamp(2rem,3.5vw,3.5rem)] font-display font-extrabold text-primary-foreground tracking-tight mb-4">
-            Найди своего Наставника
+            Твой наставник уже здесь
           </h2>
-          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">Получи персональные советы по построению карьеры от успешных выпускников СГЮА. Партнеры фирм, представители адвокатского сообщества, судьи, прокуроры, бизнес-сообщества готовы делиться опытом
-
-
-            </p>
+          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">Адвокаты, судьи, партнёры фирм — все прошли тот же путь. Теперь они готовы провести тебя короткой дорогой</p>
           <Link to="/mentors" className="inline-flex items-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-card text-deep shadow-card hover:-translate-y-1 hover:shadow-float transition-all no-underline">
             Смотреть анкеты менторов
           </Link>
