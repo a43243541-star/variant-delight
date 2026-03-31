@@ -12,7 +12,7 @@ const stats = [
 const chairpersons = [
 {
   id: "chair-1",
-  name: "Богдан Новиков",
+  name: "Новиков Богдан",
   years: "2021",
   description: "Основатель штаба. Заложил фундамент организации и провел первые крупные мероприятия.",
   initials: "НБ",
@@ -20,7 +20,7 @@ const chairpersons = [
 },
 {
   id: "chair-2",
-  name: "Анна Новикова",
+  name: "Новикова Анна",
   years: "2021-2022",
   description: "Расширила сеть партнеров и запустила программу менторства для студентов.",
   initials: "НА",
@@ -28,7 +28,7 @@ const chairpersons = [
 },
 {
   id: "chair-3",
-  name: "Владислав Ситник",
+  name: "Ситник Владислав",
   years: "2022-2023",
   description: "Вывел штаб на межвузовский уровень, организовал форум молодых юристов.",
   initials: "СВ",
@@ -36,7 +36,7 @@ const chairpersons = [
 },
 {
   id: "chair-4",
-  name: "Ислам Эбзеев",
+  name: "Эбзеев Ислам",
   years: "2023",
   description: "Развивал цифровое направление и международные связи штаба.",
   initials: "ЭИ",
@@ -44,7 +44,7 @@ const chairpersons = [
 },
 {
   id: "chair-5",
-  name: "Амир Тажибов",
+  name: "Тажибов Амир",
   years: "2023-2025",
   description: "Укрепил взаимодействие с региональными юридическими сообществами.",
   initials: "ТА",
@@ -52,7 +52,7 @@ const chairpersons = [
 },
 {
   id: "chair-6",
-  name: "Руслан Каунов",
+  name: "Каунов Руслан",
   years: "2025–н.в.",
   description: "Действующий председатель. Запустил программу стажировок и карьерного трекинга.",
   initials: "КР",
@@ -129,8 +129,8 @@ const About = () => {
               key={person.id}
               className="bg-card rounded-2xl p-6 shadow-card hover:-translate-y-2 hover:shadow-float transition-all text-center group">
               
-                <div className="mx-auto w-48 h-48 mb-6">
-                  <Avatar className="w-48 h-48 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all">
+                <div className="mx-auto w-24 h-24 mb-4">
+                  <Avatar className="w-24 h-24 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all">
                     <AvatarImage src={person.img} alt={person.name} className="object-cover" />
                     <AvatarFallback className="bg-primary/10 text-primary font-display font-bold text-2xl">
                       {person.initials}
