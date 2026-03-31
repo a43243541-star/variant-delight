@@ -11,11 +11,14 @@ const Mentors = () => {
           
         {/* Left text */}
         <div>
-          <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] mb-2">НЕТВОРКИНГ</p>
+          <p className="font-handwritten text-2xl mb-2 text-primary-foreground">Закрытый клуб</p>
           <h2 className="text-[clamp(2rem,3.5vw,3.5rem)] font-display font-extrabold text-primary-foreground tracking-tight mb-4">
-            Твой наставник уже здесь
+            Найди своего Наставника
           </h2>
-          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">Адвокаты, судьи, партнёры фирм — все прошли тот же путь. Теперь они готовы провести тебя короткой дорогой</p>
+          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">Получи персональные советы по построению карьеры от успешных выпускников СГЮА. Партнеры фирм, представители адвокатского сообщества, судьи, прокуроры, бизнес-сообщества готовы делиться опытом
+
+
+            </p>
           <Link to="/mentors" className="inline-flex items-center gap-3 px-8 py-4 rounded-pill font-display font-bold text-lg bg-card text-deep shadow-card hover:-translate-y-1 hover:shadow-float transition-all no-underline">
             Смотреть анкеты менторов
           </Link>
@@ -25,7 +28,7 @@ const Mentors = () => {
         <div className="hidden md:grid grid-cols-2 gap-6 items-start">
           {/* Card 1 */}
           <div
-              className="w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] -rotate-[2deg] transition-all"
+              className="w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all"
               style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
               
             <div className="flex items-center gap-3 mb-3">
@@ -41,13 +44,13 @@ const Mentors = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] rotate-[2deg] transition-all" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
+          <div className="w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
               
             <div className="flex items-center gap-3 mb-3">
               <img alt="Василий Артин" className="w-12 h-12 rounded-full border-2 border-white object-cover" src="/lovable-uploads/928f8173-c80f-49fe-9679-269667029d4f.png" />
               <div>
                 <p className="font-display font-bold text-sm text-primary-foreground">Василий Артин</p>
-                <span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">БАНКРОТСТВО</span>
+                <span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">НЕСОСТОЯТЕЛЬНОСТЬ И БАНКРОТСТВО</span>
               </div>
             </div>
             <p className="text-sm text-primary-foreground/80 italic">"Готов взять под крыло 2 студентов: пройдем путь от траектории арбитража до архитектуры антикризистного менеджмента вместе"
