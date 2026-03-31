@@ -14,7 +14,7 @@ const Projects = () => {
       
       <div className="container mx-auto">
         <div className="text-center mb-14">
-          <p className="font-handwritten text-lg md:text-xl mb-2 text-destructive">
+          <p className="font-handwritten text-xl md:text-2xl mb-2 text-destructive">
             Чем мы занимаемся
           </p>
           <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold tracking-tight">
