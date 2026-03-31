@@ -31,7 +31,7 @@ const Index = () => {
       <About />
       <History />
       <Projects />
-      <Testimonials />
+      
       <Mentors />
       <BecomeMentor />
       <Gallery />
