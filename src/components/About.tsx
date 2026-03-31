@@ -91,7 +91,7 @@ const About = () => {
             <div className="relative rounded-3xl p-3 bg-card shadow-float mb-10">
               <img
                 alt="Команда штаба"
-                className="w-full rounded-2xl block h-[380px] object-cover"
+                className="w-full rounded-2xl block h-[460px] object-cover object-top"
                 src="/lovable-uploads/4f4d3394-03b9-40de-98fa-16a2f2ec4cfb.jpg" />
               
             </div>
