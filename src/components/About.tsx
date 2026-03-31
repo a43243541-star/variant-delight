@@ -12,7 +12,7 @@ const stats = [
 const chairpersons = [
 {
   id: "chair-1",
-  name: "Новиков Богдан",
+  name: "Богдан Новиков",
   years: "2021",
   description: "Основатель штаба. Заложил фундамент организации и провел первые крупные мероприятия.",
   initials: "НБ",
@@ -20,7 +20,7 @@ const chairpersons = [
 },
 {
   id: "chair-2",
-  name: "Новикова Анна",
+  name: "Анна Новикова",
   years: "2021-2022",
   description: "Расширила сеть партнеров и запустила программу менторства для студентов.",
   initials: "НА",
@@ -28,7 +28,7 @@ const chairpersons = [
 },
 {
   id: "chair-3",
-  name: "Ситник Владислав",
+  name: "Владислав Ситник",
   years: "2022-2023",
   description: "Вывел штаб на межвузовский уровень, организовал форум молодых юристов.",
   initials: "СВ",
@@ -36,7 +36,7 @@ const chairpersons = [
 },
 {
   id: "chair-4",
-  name: "Эбзеев Ислам",
+  name: "Ислам Эбзеев",
   years: "2023",
   description: "Развивал цифровое направление и международные связи штаба.",
   initials: "ЭИ",
@@ -44,7 +44,7 @@ const chairpersons = [
 },
 {
   id: "chair-5",
-  name: "Тажибов Амир",
+  name: "Амир Тажибов",
   years: "2023-2025",
   description: "Укрепил взаимодействие с региональными юридическими сообществами.",
   initials: "ТА",
@@ -52,7 +52,7 @@ const chairpersons = [
 },
 {
   id: "chair-6",
-  name: "Каунов Руслан",
+  name: "Руслан Каунов",
   years: "2025–н.в.",
   description: "Действующий председатель. Запустил программу стажировок и карьерного трекинга.",
   initials: "КР",
@@ -126,8 +126,8 @@ const About = () => {
               key={person.id}
               className="bg-card rounded-2xl p-6 shadow-card hover:-translate-y-2 hover:shadow-float transition-all text-center group">
               
-                <div className="mx-auto w-52 h-52 mb-6">
-                  <Avatar className="w-52 h-52 border-2 border-border/60">
+                <div className="mx-auto w-44 h-44 mb-6">
+                  <Avatar className="w-44 h-44 border-2 border-border/60">
                     <AvatarImage src={person.img} alt={person.name} className="object-cover object-top" />
                     <AvatarFallback className="bg-primary/10 text-primary font-display font-bold text-2xl">
                       {person.initials}
