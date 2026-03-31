@@ -126,9 +126,9 @@ const About = () => {
               key={person.id}
               className="bg-card rounded-2xl p-6 shadow-card hover:-translate-y-2 hover:shadow-float transition-all text-center group">
               
-                <div className="mx-auto w-24 h-24 mb-4">
-                  <Avatar className="w-24 h-24 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all">
-                    <AvatarImage src={person.img} alt={person.name} className="object-cover" />
+                <div className="mx-auto w-52 h-52 mb-6">
+                  <Avatar className="w-52 h-52 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all shadow-sm border-2 border-[#f0f0f0]">
+                    <AvatarImage src={person.img} alt={person.name} className="object-cover object-top" />
                     <AvatarFallback className="bg-primary/10 text-primary font-display font-bold text-2xl">
                       {person.initials}
                     </AvatarFallback>
