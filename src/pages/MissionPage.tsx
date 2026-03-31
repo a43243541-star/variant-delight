@@ -49,7 +49,7 @@ const MissionPage = () => {
       <section className="pt-32 pb-16 bg-deep text-deep-foreground relative overflow-hidden">
         <div className="bg-shape w-[500px] h-[500px] bg-primary/15 -top-[150px] -right-[150px]" />
         <div className="container mx-auto text-center relative z-10">
-          <p className="font-handwritten text-2xl mb-2 text-primary-foreground">Наша миссия</p>
+          <p className="font-handwritten text-lg md:text-xl mb-2 text-primary-foreground">Наша миссия</p>
           <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-display font-extrabold tracking-tight mb-6">
             <span className="text-primary">Молодежного штаба Ассоциации выпускников</span>
           </h1>

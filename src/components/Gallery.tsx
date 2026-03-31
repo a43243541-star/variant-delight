@@ -17,7 +17,7 @@ const Gallery = () => {
       <div className="container mx-auto">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="font-handwritten text-2xl mb-2 text-destructive">Жизнь штаба</p>
+            <p className="font-handwritten text-lg md:text-xl mb-2 text-destructive">Жизнь штаба</p>
             <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold tracking-tight">
               События в <span className="text-primary">лицах</span>
             </h2>

@@ -123,7 +123,7 @@ const Hero = () => {
         className={`relative z-[2] container mx-auto text-primary-foreground max-w-[900px] text-left scroll-reveal ${isVisible ? "visible" : ""}`}
         style={{ transform: `translateY(${-scrollY * 0.1}px)` }}
       >
-        <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] opacity-0 animate-fade-up">
+        <p className="font-handwritten text-lg md:text-xl text-primary-foreground opacity-0 animate-fade-up">
           Твой старт в карьеру
         </p>
         <h1 className="text-primary-foreground text-[clamp(2.2rem,6vw,6rem)] font-display font-black tracking-[0.02em] leading-[1.05] my-4 opacity-0 animate-fade-up-d1">

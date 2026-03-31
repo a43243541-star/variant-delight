@@ -71,7 +71,7 @@ const About = () => {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
           <div>
-            <p className="font-handwritten text-2xl mb-2 text-destructive">Кто мы такие?</p>
+            <p className="font-handwritten text-lg md:text-xl mb-2 text-destructive">Кто мы такие?</p>
             <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold tracking-tight mb-6">
               Энергия академии<br />
               <span className="text-primary">Опыт выпускников</span>
@@ -115,7 +115,7 @@ const About = () => {
 
         {/* Chairpersons section */}
         <div className="mt-24">
-          <p className="font-handwritten text-2xl mb-2 text-center text-destructive">Руководство</p>
+          <p className="font-handwritten text-lg md:text-xl mb-2 text-center text-destructive">Руководство</p>
           <h3 className="text-[clamp(2rem,3vw,3rem)] font-display font-extrabold tracking-tight mb-12 text-center">
             Председатели <span className="text-primary">штаба</span>
           </h3>
