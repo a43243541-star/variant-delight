@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import History from "@/components/History";
 import Projects from "@/components/Projects";
+import Testimonials from "@/components/Testimonials";
 import Mentors from "@/components/Mentors";
 import BecomeMentor from "@/components/BecomeMentor";
 import Gallery from "@/components/Gallery";
@@ -25,15 +26,18 @@ const Index = () => {
   return (
   <div className="min-h-screen overflow-x-hidden">
     <Header />
-    <Hero />
-    <About />
-    <History />
-    <Projects />
-    <Mentors />
-    <BecomeMentor />
-    <Gallery />
-    <JoinCTA />
-    <Footer />
+    <div className="snap-page">
+      <Hero />
+      <About />
+      <History />
+      <Projects />
+      <Testimonials />
+      <Mentors />
+      <BecomeMentor />
+      <Gallery />
+      <JoinCTA />
+      <Footer />
+    </div>
   </div>
   );
 };
