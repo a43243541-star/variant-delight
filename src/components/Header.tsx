@@ -54,8 +54,8 @@ const Header = () => {
           
           <img
             alt="Логотип"
-            className="w-10 h-10 rounded-full object-cover"
-            src="/lovable-uploads/cc2bdb7b-64cb-41a5-8f15-37697f9aa18c.jpg"
+            className="w-10 h-10 rounded-full object-contain"
+            src="/lovable-uploads/Gemini_Generated_Image_1fknz61fknz61fkn-Photoroom.png"
           />
           Молодежный штаб АВ
         </a>
