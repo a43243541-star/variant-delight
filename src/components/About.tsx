@@ -94,9 +94,6 @@ const About = () => {
                 className="w-full rounded-2xl block h-[300px] object-cover"
                 src="/lovable-uploads/4f4d3394-03b9-40de-98fa-16a2f2ec4cfb.jpg" />
               
-              <div className="absolute -bottom-5 -left-5 bg-deep text-deep-foreground p-5 rounded-full font-display font-extrabold w-[100px] h-[100px] flex items-center justify-center text-center text-xs shadow-[0_10px_20px_rgba(10,25,48,0.3)] -rotate-[10deg] leading-tight">
-                С 2021 года
-              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
