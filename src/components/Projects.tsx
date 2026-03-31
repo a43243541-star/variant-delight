@@ -14,7 +14,7 @@ const Projects = () => {
       
       <div className="container mx-auto">
         <div className="text-center mb-14">
-          <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] mb-2">
+          <p className="font-handwritten text-2xl mb-2 text-destructive">
             Чем мы занимаемся
           </p>
           <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold tracking-tight">

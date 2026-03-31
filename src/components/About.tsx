@@ -71,7 +71,7 @@ const About = () => {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
           <div>
-            <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] mb-2">Кто мы такие?</p>
+            <p className="font-handwritten text-2xl mb-2 text-destructive">Кто мы такие?</p>
             <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold tracking-tight mb-6">
               Энергия академии<br />
               <span className="text-primary">Опыт выпускников</span>
@@ -94,6 +94,9 @@ const About = () => {
                 className="w-full rounded-2xl block h-[300px] object-cover"
                 src="/lovable-uploads/4f4d3394-03b9-40de-98fa-16a2f2ec4cfb.jpg" />
               
+              <div className="absolute -bottom-5 -left-5 bg-deep text-deep-foreground p-5 rounded-full font-display font-extrabold w-[100px] h-[100px] flex items-center justify-center text-center text-xs shadow-[0_10px_20px_rgba(10,25,48,0.3)] -rotate-[10deg] leading-tight">
+                С 2021 года
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
@@ -115,7 +118,7 @@ const About = () => {
 
         {/* Chairpersons section */}
         <div className="mt-24">
-          <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] mb-2 text-center">Руководство</p>
+          <p className="font-handwritten text-2xl mb-2 text-center text-destructive">Руководство</p>
           <h3 className="text-[clamp(2rem,3vw,3rem)] font-display font-extrabold tracking-tight mb-12 text-center">
             Председатели <span className="text-primary">штаба</span>
           </h3>
@@ -126,9 +129,9 @@ const About = () => {
               key={person.id}
               className="bg-card rounded-2xl p-6 shadow-card hover:-translate-y-2 hover:shadow-float transition-all text-center group">
               
-                <div className="mx-auto w-40 h-40 mb-6">
-                  <Avatar className="w-40 h-40 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all shadow-sm border-2 border-[#f0f0f0]">
-                    <AvatarImage src={person.img} alt={person.name} className="object-cover object-top" />
+                <div className="mx-auto w-48 h-48 mb-6">
+                  <Avatar className="w-48 h-48 ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all">
+                    <AvatarImage src={person.img} alt={person.name} className="object-cover" />
                     <AvatarFallback className="bg-primary/10 text-primary font-display font-bold text-2xl">
                       {person.initials}
                     </AvatarFallback>

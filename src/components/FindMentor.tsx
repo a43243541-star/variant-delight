@@ -147,7 +147,7 @@ const FindMentor = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] mb-2">Персональный подход</p>
+          <p className="font-handwritten text-primary text-2xl mb-2">Персональный подход</p>
           <h2 className="text-[clamp(2rem,3.5vw,3.5rem)] font-display font-extrabold tracking-tight mb-4">
             Найти наставника
           </h2>
@@ -188,15 +188,15 @@ const FindMentor = () => {
         </div>
 
         {/* Mentor Cards Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
           {filtered.map((mentor) =>
           <div
             key={mentor.name}
-            className="group bg-white/95 text-deep rounded-2xl border border-border/40 overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
+            className="group bg-card rounded-2xl border border-border overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_hsl(var(--primary)/0.12)] transition-all duration-300 flex flex-col">
             
               {/* Photo */}
               <div className="relative w-full flex justify-center pt-6 pb-2">
-                <div className={`relative ${mentor.imgWrapClass ?? "w-36 h-36"} rounded-full overflow-hidden border-4 border-primary/20 shadow-lg`}
+                <div className={`relative ${mentor.imgWrapClass ?? "w-32 h-32"} rounded-full overflow-hidden border-4 border-primary/20 shadow-lg`}
                   style={{
                     background: "linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--primary)/0.03))"
                   }}>
@@ -214,16 +214,16 @@ const FindMentor = () => {
               </div>
 
               {/* Info */}
-              <div className="px-5 py-5 text-center flex flex-col flex-1">
-                <h3 className="font-display font-bold text-lg text-deep mb-1">{mentor.name}</h3>
-                <span className="inline-block text-[10px] bg-primary text-primary-foreground px-2.5 py-0.5 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
+              <div className="px-4 py-4 text-center flex flex-col flex-1">
+                <h3 className="font-display font-bold text-base text-foreground mb-1">{mentor.name}</h3>
+                <span className="inline-block text-[10px] bg-primary/10 text-primary px-2.5 py-0.5 rounded-pill font-bold font-display uppercase mb-2 whitespace-pre-line">
                   {mentor.specialty}
                 </span>
-                <p className="text-sm mb-2 text-deep/70 whitespace-pre-line flex-1">{mentor.role}</p>
+                <p className="text-xs mb-1 text-muted-foreground whitespace-pre-line flex-1">{mentor.role}</p>
                 
                 <div className="mt-auto">
-                  <p className="text-sm font-display font-bold text-deep mb-2">Опыт: {mentor.experience}</p>
-                  <p className="text-sm text-deep/70 leading-relaxed mb-4">
+                  <p className="text-xs font-display font-bold text-foreground mb-2">Опыт: {mentor.experience}</p>
+                  <p className="text-xs text-foreground/70 italic leading-relaxed mb-4">
                     &ldquo;{mentor.quote}&rdquo;
                   </p>
                   <button

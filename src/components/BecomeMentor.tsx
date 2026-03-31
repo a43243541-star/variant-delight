@@ -28,7 +28,7 @@ const BecomeMentor = () => {
 
       <div className="container mx-auto relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] mb-2">Присоединяйся</p>
+          <p className="font-handwritten text-primary text-2xl mb-2">Присоединяйся</p>
           <h2 className="text-[clamp(2rem,3.5vw,3.5rem)] font-display font-extrabold tracking-tight text-primary-foreground mb-4">
             Стань наставником
           </h2>
@@ -42,13 +42,14 @@ const BecomeMentor = () => {
           {benefits.map((b) => (
             <div
               key={b.title}
-              className="rounded-2xl p-6 text-center bg-white shadow-md"
+              className="rounded-2xl p-6 text-center border border-primary-foreground/10"
+              style={{ background: "rgba(255,255,255,0.08)", backdropFilter: "blur(16px)" }}
             >
               <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
                 <b.icon size={28} className="text-primary" />
               </div>
-              <h3 className="font-display font-bold text-lg text-deep mb-2">{b.title}</h3>
-              <p className="text-deep/70 text-sm leading-relaxed">{b.text}</p>
+              <h3 className="font-display font-bold text-lg text-primary-foreground mb-2">{b.title}</h3>
+              <p className="text-primary-foreground/60 text-sm leading-relaxed">{b.text}</p>
             </div>
           ))}
         </div>

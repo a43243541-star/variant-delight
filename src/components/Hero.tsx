@@ -123,7 +123,7 @@ const Hero = () => {
         className={`relative z-[2] container mx-auto text-primary-foreground max-w-[900px] scroll-reveal ${isVisible ? "visible" : ""}`}
         style={{ transform: `translateY(${-scrollY * 0.1}px)` }}
       >
-        <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] opacity-0 animate-fade-up">
+        <p className="font-handwritten text-primary-foreground text-2xl md:text-3xl opacity-0 animate-fade-up">
           Твой старт в карьеру
         </p>
         <h1 className="text-primary-foreground text-[clamp(2.2rem,6vw,6rem)] font-display font-black tracking-tight leading-[1.05] my-4 opacity-0 animate-fade-up-d1">
@@ -142,11 +142,11 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-pill font-display font-bold text-base sm:text-lg bg-primary text-primary-foreground shadow-[0_10px_20px_rgba(0,71,255,0.3)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_30px_rgba(0,71,255,0.4)] transition-all duration-300 ease-out no-underline relative overflow-hidden z-[1]"
           >
-            Вступить в штаб
+            Присоединиться к команде
           </a>
           <button
             onClick={() => scrollTo("#gallery")}
-            className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-pill font-display font-bold text-base sm:text-lg bg-transparent text-primary-foreground border border-primary-foreground/80 hover:border-primary-foreground hover:text-primary-foreground/90 hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer"
+            className="inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-pill font-display font-bold text-base sm:text-lg bg-card text-deep shadow-card hover:-translate-y-1 hover:text-primary hover:shadow-float transition-all duration-300 ease-out cursor-pointer border-none"
           >
             События
           </button>

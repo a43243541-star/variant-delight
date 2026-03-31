@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { toast } from "sonner";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Send, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   const { ref, isVisible } = useScrollReveal();
@@ -35,7 +34,7 @@ const Footer = () => {
       </span>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid sm:grid-cols-1 lg:grid-cols-[2fr_1fr_1fr_1.5fr] gap-10 mb-16">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-[2fr_1fr_1.5fr] gap-10 mb-16">
           {/* Brand */}
           <div>
             <h3 className="font-display text-[2.5rem] font-extrabold text-primary-foreground mb-4 leading-tight">
@@ -52,13 +51,9 @@ const Footer = () => {
               Навигация
             </h4>
             <ul className="list-none space-y-3">
-              {[
-                { label: "О штабе", href: "#about" },
-                { label: "Об Ассоциации", href: "#history" },
-                { label: "Наставники", href: "#mentors" },
-                { label: "Проекты", href: "#projects" },
-                { label: "События", href: "#gallery" }
-              ].
+              {[{ label: "О штабе", href: "#about" }, { label: "Об Ассоциации", href: "#history" },
+
+              { label: "Фотографии", href: "#gallery" }].
               map((l) =>
               <li key={l.href}>
                   <button
@@ -69,31 +64,6 @@ const Footer = () => {
                   </button>
                 </li>
               )}
-            </ul>
-          </div>
-
-          {/* Contacts */}
-          <div>
-            <h4 className="font-display text-xs font-bold uppercase tracking-widest text-primary-foreground/40 mb-5">
-              Контакты
-            </h4>
-            <ul className="list-none space-y-3">
-              <li>
-                <a
-                  href="mailto:info@avsgua.ru"
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-base no-underline"
-                >
-                  info@avsgua.ru
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+78452000000"
-                  className="text-primary-foreground/70 hover:text-primary-foreground transition-colors text-base no-underline"
-                >
-                  +7 (8452) 00-00-00
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -121,31 +91,15 @@ const Footer = () => {
               </button>
             </form>
             <div className="flex gap-4">
-              <a
-                href="https://t.me/shtab_sgua"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-semibold text-sm inline-flex items-center gap-2 no-underline"
-              >
-                <Send size={16} />
-                Telegram
-              </a>
-              <a
-                href="https://vk.com/avsgua"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-semibold text-sm inline-flex items-center gap-2 no-underline"
-              >
-                <MessageCircle size={16} />
-                ВКонтакте
-              </a>
+              <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-semibold text-sm">Telegram</a>
+              <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors font-semibold text-sm">ВКонтакте</a>
             </div>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="border-t border-primary-foreground/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-primary-foreground/50">
-          <p>© {new Date().getFullYear()} Молодежный штаб Ассоциации выпускников "СЮИ-СГАП-СГЮА".  Все права защищены.</p>
+          <p>© 2024 Молодежный штаб Ассоциации выпускников "СЮИ-СГАП-СГЮА".  Все права защищены.</p>
           <p>г. Саратов, ул. Чернышевского, 104</p>
         </div>
       </div>
