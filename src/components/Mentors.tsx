@@ -28,7 +28,7 @@ const Mentors = () => {
         <div className="hidden md:grid grid-cols-2 gap-6 items-start">
           {/* Card 1 */}
           <div
-              className="w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all"
+              className="w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] -rotate-[2deg] transition-all"
               style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
               
             <div className="flex items-center gap-3 mb-3">
@@ -44,13 +44,13 @@ const Mentors = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
+          <div className="w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] rotate-[2deg] transition-all" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
               
             <div className="flex items-center gap-3 mb-3">
               <img alt="Василий Артин" className="w-12 h-12 rounded-full border-2 border-white object-cover" src="/lovable-uploads/928f8173-c80f-49fe-9679-269667029d4f.png" />
               <div>
                 <p className="font-display font-bold text-sm text-primary-foreground">Василий Артин</p>
-                <span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">НЕСОСТОЯТЕЛЬНОСТЬ И БАНКРОТСТВО</span>
+                <span className="text-xs bg-card text-primary px-2 py-0.5 rounded font-bold uppercase">БАНКРОТСТВО</span>
               </div>
             </div>
             <p className="text-sm text-primary-foreground/80 italic">"Готов взять под крыло 2 студентов: пройдем путь от траектории арбитража до архитектуры антикризистного менеджмента вместе"
