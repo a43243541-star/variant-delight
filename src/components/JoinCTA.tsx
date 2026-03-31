@@ -11,7 +11,7 @@ const JoinCTA = () => {
       className={`py-24 lg:py-32 bg-deep text-deep-foreground scroll-reveal ${isVisible ? "visible" : ""}`}>
       
       <div className="container mx-auto text-center max-w-3xl">
-        <p className="font-handwritten text-primary text-2xl mb-2">Стань частью команды</p>
+        <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] mb-2">Стань частью команды</p>
         <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold tracking-tight text-primary-foreground mb-6">
           Присоединяйся к&nbsp;штабу
         </h2>

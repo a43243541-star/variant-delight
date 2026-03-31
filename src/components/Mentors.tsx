@@ -11,7 +11,7 @@ const Mentors = () => {
           
         {/* Left text */}
         <div>
-          <p className="font-handwritten text-2xl mb-2 text-primary-foreground">Закрытый клуб</p>
+          <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] mb-2">Закрытый клуб</p>
           <h2 className="text-[clamp(2rem,3.5vw,3.5rem)] font-display font-extrabold text-primary-foreground tracking-tight mb-4">
             Найди своего Наставника
           </h2>

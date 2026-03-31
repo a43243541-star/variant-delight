@@ -17,7 +17,7 @@ const Gallery = () => {
       <div className="container mx-auto">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="font-handwritten text-2xl mb-2 text-destructive">Жизнь штаба</p>
+            <p className="text-destructive text-sm md:text-base font-semibold uppercase tracking-[0.2em] mb-2">Жизнь штаба</p>
             <h2 className="text-[clamp(2.5rem,4vw,4rem)] font-display font-extrabold tracking-tight">
               События в <span className="text-primary">лицах</span>
             </h2>
@@ -44,18 +44,18 @@ const Gallery = () => {
         ref={scrollRef}
         className="flex gap-5 overflow-x-auto scrollbar-hide px-[max(1.25rem,calc((100vw-1280px)/2+1.25rem))] snap-x snap-mandatory pb-4">
         
-        {events.map((p) =>
+        {events.map((p, index) =>
         <Link
           key={p.id}
           to={`/events/${p.id}`}
-          className="shrink-0 w-[280px] sm:w-[320px] rounded-2xl overflow-hidden relative cursor-pointer group block no-underline snap-start">
+          className={`shrink-0 w-[280px] sm:w-[320px] rounded-2xl overflow-hidden relative cursor-pointer group block no-underline snap-start ${index === 0 ? "ml-4" : ""}`}>
           
             <img
             src={p.src}
             alt={p.title}
             className="w-full h-[220px] sm:h-[260px] object-cover transition-transform duration-500 group-hover:scale-105" />
           
-            <div className="absolute bottom-0 left-0 w-full px-5 pb-4 pt-12 bg-gradient-to-t from-black/80 to-transparent text-primary-foreground translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+            <div className="absolute bottom-0 left-0 w-full px-5 pb-4 pt-12 bg-gradient-to-t from-black/80 to-transparent text-primary-foreground">
               <p className="font-display font-bold text-sm">{p.title}</p>
               <p className="text-xs text-primary-foreground/70">{p.subtitle}</p>
             </div>
