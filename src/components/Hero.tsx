@@ -132,7 +132,7 @@ const Hero = () => {
           начинается здесь
         </h1>
         <p className="text-base md:text-xl text-primary-foreground/80 mb-10 max-w-[600px] opacity-0 animate-fade-up-d2">
-          Молодежный штаб Ассоциации выпускников СЮИ-СГАП-СГЮА. Объединяем
+          Молодежный штаб Ассоциации выпускников <span className="whitespace-nowrap">СЮИ-СГАП-СГЮА</span>. Объединяем
           поколения, делимся опытом, создаем элиту юриспруденции вместе
         </p>
         <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up-d3">

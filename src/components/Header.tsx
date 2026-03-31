@@ -52,9 +52,11 @@ const Header = () => {
           className="flex items-center gap-3 font-display font-extrabold text-lg text-deep no-underline"
           onClick={(e) => {e.preventDefault(); if (location.pathname !== "/") { navigate("/"); } else { window.scrollTo({ top: 0, behavior: "smooth" }); }}}>
           
-          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
-            <img alt="Штаб СГЮА" className="w-8 h-8 object-contain" src="/lovable-uploads/cc2bdb7b-64cb-41a5-8f15-37697f9aa18c.jpg" />
-          </div>
+          <img
+            alt="Логотип"
+            className="w-10 h-10 rounded-full object-cover"
+            src="/lovable-uploads/cc2bdb7b-64cb-41a5-8f15-37697f9aa18c.jpg"
+          />
           Молодежный штаб АВ
         </a>
 
