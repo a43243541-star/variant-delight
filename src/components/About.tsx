@@ -127,7 +127,7 @@ const About = () => {
               className="bg-card rounded-2xl p-6 shadow-card hover:-translate-y-2 hover:shadow-float transition-all text-center group">
               
                 <div className="mx-auto w-52 h-52 mb-6">
-                  <Avatar className="w-52 h-52">
+                  <Avatar className="w-52 h-52 border-2 border-border/60">
                     <AvatarImage src={person.img} alt={person.name} className="object-cover object-top" />
                     <AvatarFallback className="bg-primary/10 text-primary font-display font-bold text-2xl">
                       {person.initials}
