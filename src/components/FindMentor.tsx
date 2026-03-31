@@ -196,7 +196,7 @@ const FindMentor = () => {
             
               {/* Photo */}
               <div className="relative w-full flex justify-center pt-6 pb-2">
-                <div className={`relative ${mentor.imgWrapClass ?? "w-32 h-32"} rounded-full overflow-hidden border-4 border-primary/20 shadow-lg`}
+                <div className={`relative ${mentor.imgWrapClass ?? "w-40 h-40"} rounded-full overflow-hidden border-4 border-primary/20 shadow-lg`}
                   style={{
                     background: "linear-gradient(135deg, hsl(var(--primary)/0.08), hsl(var(--primary)/0.03))"
                   }}>
