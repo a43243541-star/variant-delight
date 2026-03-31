@@ -25,10 +25,10 @@ const Mentors = () => {
         </div>
 
         {/* Right — stacked mentor cards */}
-        <div className="relative h-[300px] hidden md:block">
+        <div className="hidden md:grid grid-cols-2 gap-6 items-start">
           {/* Card 1 */}
           <div
-              className="absolute top-0 left-0 w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] -rotate-[5deg] z-[2] hover:-translate-y-2 hover:rotate-0 hover:scale-105 hover:z-10 transition-all"
+              className="w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all"
               style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
               
             <div className="flex items-center gap-3 mb-3">
@@ -44,7 +44,7 @@ const Mentors = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="absolute bottom-0 right-0 w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] rotate-[5deg] z-[1] hover:-translate-y-2 hover:rotate-0 hover:scale-105 hover:z-10 transition-all" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
+          <div className="w-[280px] rounded-2xl p-5 border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all" style={{ background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)" }}>
               
             <div className="flex items-center gap-3 mb-3">
               <img alt="Василий Артин" className="w-12 h-12 rounded-full border-2 border-white object-cover" src="/lovable-uploads/928f8173-c80f-49fe-9679-269667029d4f.png" />
