@@ -30,9 +30,13 @@ const App = () => (
           <Route path="/mission" element={<MissionPage />} />
           <Route path="/projects/:id" element={<ProjectPage />} />
           <Route path="/mentors" element={<MentorsPage />} />
+          <Route path="/privacy" element={<PrivacyPolicyPage />} />
+          <Route path="/consent" element={<ConsentPage />} />
+          <Route path="/cookies" element={<CookiePolicyPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieBanner />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
