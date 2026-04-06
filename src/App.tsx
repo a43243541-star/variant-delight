@@ -8,8 +8,12 @@ import EventPage from "./pages/EventPage.tsx";
 import MissionPage from "./pages/MissionPage.tsx";
 import ProjectPage from "./pages/ProjectPage.tsx";
 import MentorsPage from "./pages/MentorsPage.tsx";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.tsx";
+import ConsentPage from "./pages/ConsentPage.tsx";
+import CookiePolicyPage from "./pages/CookiePolicyPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
+import CookieBanner from "./components/CookieBanner.tsx";
 
 const queryClient = new QueryClient();
 
