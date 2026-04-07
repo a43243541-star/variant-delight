@@ -10,7 +10,7 @@ const Projects = () => {
     <section
       ref={ref}
       id="projects"
-      className={`py-24 lg:py-32 scroll-reveal ${isVisible ? "visible" : ""}`}>
+      className={`py-16 lg:py-20 scroll-reveal ${isVisible ? "visible" : ""}`}>
       
       <div className="container mx-auto">
         <div className="text-center mb-14">

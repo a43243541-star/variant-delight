@@ -14,7 +14,7 @@ const BecomeMentor = () => {
   return (
     <section
       ref={ref}
-      className={`relative py-24 lg:py-32 overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}
+      className={`relative py-16 lg:py-20 overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}
     >
       {/* Background image */}
       <div className="absolute inset-0">
