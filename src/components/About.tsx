@@ -64,7 +64,7 @@ const About = () => {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section ref={ref} id="about" className={`py-24 lg:py-32 relative overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}>
+    <section ref={ref} id="about" className={`py-16 lg:py-20 relative overflow-hidden scroll-reveal ${isVisible ? "visible" : ""}`}>
       <div className="bg-shape w-[400px] h-[400px] bg-primary/20 -top-[100px] -right-[100px]" />
       <div className="bg-shape w-[300px] h-[300px] bg-accent/15 bottom-[10%] -left-[50px]" style={{ animationDelay: "-5s" }} />
 

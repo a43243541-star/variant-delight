@@ -8,7 +8,7 @@ const JoinCTA = () => {
     <section
       ref={ref}
       id="join"
-      className={`py-24 lg:py-32 bg-deep text-deep-foreground scroll-reveal ${isVisible ? "visible" : ""}`}>
+      className={`py-16 lg:py-20 bg-deep text-deep-foreground scroll-reveal ${isVisible ? "visible" : ""}`}>
       
       <div className="container mx-auto text-center max-w-3xl">
         <p className="font-handwritten text-primary text-2xl mb-2">Стань частью команды</p>

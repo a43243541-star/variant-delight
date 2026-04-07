@@ -13,7 +13,7 @@ const Gallery = () => {
   };
 
   return (
-    <section ref={ref} id="gallery" className={`py-24 lg:py-32 scroll-reveal ${isVisible ? "visible" : ""}`}>
+    <section ref={ref} id="gallery" className={`py-16 lg:py-20 scroll-reveal ${isVisible ? "visible" : ""}`}>
       <div className="container mx-auto">
         <div className="flex items-end justify-between mb-10">
           <div>
